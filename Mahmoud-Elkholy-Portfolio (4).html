@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahmoud Elkholy, Ph.D. | Electrical Power &amp; Energy Systems Researcher</title>
+<meta name="description" content="Postdoctoral Researcher at KFUPM specializing in renewable energy systems, microgrids, AI-driven energy management, smart grids, and electric vehicle charging technologies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --navy:#0E2A47; --navy-deep:#0A1F38; --white:#FFFFFF; --mist:#F4F6F8;
+  --slate:#5B6B7F; --ink:#1A2333; --gold:#A8813C; --gold-text:#8A6A2E;
+  --gold-light:#D4B876; --hairline:#E2E6EA;
+  --serif:'IBM Plex Serif',Georgia,serif;
+  --sans:'IBM Plex Sans',-apple-system,Segoe UI,sans-serif;
+  --mono:'IBM Plex Mono',Menlo,monospace;
+  --shadow:0 14px 34px -14px rgba(14,42,71,.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+section[id]{scroll-margin-top:84px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.container{max-width:1160px;margin-inline:auto;padding-inline:clamp(20px,5vw,40px)}
+.section{padding-block:clamp(60px,9vw,110px)}
+.section--alt{background:var(--mist)}
+.section--navy{background:linear-gradient(155deg,var(--navy-deep),var(--navy) 65%);color:var(--white)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);margin-bottom:18px}
+.eyebrow::before{content:'';width:22px;height:2px;background:var(--gold);flex:none}
+.eyebrow--light{color:var(--gold-light)}
+.section-head{max-width:680px;margin-bottom:52px}
+.section-title{font-family:var(--serif);font-size:clamp(28px,3.6vw,40px);font-weight:600;color:var(--ink);margin-bottom:16px;line-height:1.2}
+.section-title--light{color:var(--white)}
+.section-intro{font-size:16.5px;color:var(--slate);max-width:620px}
+.section-intro--light{color:#C6D0DC}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 30px;border-radius:8px;font-size:14.5px;font-weight:600;letter-spacing:.01em;transition:all .25s ease;white-space:nowrap}
+.btn-gold{background:var(--gold);color:var(--white)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(168,129,60,.55)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.38);color:var(--white)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-line-light{border:1.5px solid var(--gold-light);color:var(--gold-light);background:rgba(212,184,118,.08)}
+.btn-line-light:hover{background:rgba(212,184,118,.16);border-color:var(--gold-light);color:#fff}
+.btn-line{border:1.5px solid var(--hairline);color:var(--navy)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold-text)}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:150;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:all .3s ease}
+.site-header.scrolled{border-bottom-color:var(--hairline);box-shadow:0 4px 24px -12px rgba(14,42,71,.15)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--navy);letter-spacing:.01em}
+.logo span{color:var(--gold-text)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{position:relative;font-size:14.5px;font-weight:500;color:var(--ink);padding:6px 1px;transition:color .2s ease}
+.nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+.nav-links a:hover,.nav-links a.active{color:var(--gold-text)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.menu-toggle{display:none;font-size:20px;color:var(--navy);width:40px;height:40px;align-items:center;justify-content:center}
+.nav-backdrop{position:fixed;inset:0;background:rgba(10,20,35,.45);opacity:0;pointer-events:none;transition:opacity .3s ease;z-index:140}
+.nav-backdrop.is-open{opacity:1;pointer-events:auto}
+
+@media (max-width:900px){
+  .nav-links{position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);background:var(--white);flex-direction:column;align-items:flex-start;justify-content:center;gap:26px;padding-inline:36px;transform:translateX(100%);transition:transform .35s ease;box-shadow:-10px 0 40px rgba(0,0,0,.15);z-index:150}
+  .nav-links.is-open{transform:translateX(0)}
+  .menu-toggle{display:flex}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding-block:150px 90px;color:var(--white)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(155deg,var(--navy-deep),var(--navy) 65%);background-image:radial-gradient(circle at 1px 1px,rgba(255,255,255,.07) 1px,transparent 0),linear-gradient(155deg,var(--navy-deep),var(--navy) 65%);background-size:26px 26px,100% 100%;z-index:0}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr 1fr;gap:56px;align-items:center}
+.hero-name{font-family:var(--serif);font-size:clamp(34px,5vw,58px);font-weight:600;line-height:1.08;margin-bottom:14px}
+.hero-role{font-size:clamp(16px,2vw,19px);font-weight:600;color:var(--gold-light);margin-bottom:14px}
+.hero-affil-list{margin-bottom:24px;display:flex;flex-direction:column;gap:5px}
+.hero-affil-line{font-size:14.5px;color:#B9C4D2;line-height:1.6;display:flex;align-items:baseline;gap:9px}
+.hero-affil-line::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex:none;transform:translateY(-2px)}
+.hero-affil-line b{color:#E4E9EF;font-weight:500}
+.hero-abstract{font-size:16.5px;color:#D7DEE7;max-width:580px;margin-bottom:30px;line-height:1.75}
+.hero-meta{display:flex;flex-wrap:wrap;gap:22px;padding:20px 24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;margin-bottom:30px}
+.hero-meta-item{display:flex;flex-direction:column;gap:4px}
+.hero-meta-label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#9FADBE}
+.hero-meta-value{font-size:14.5px;font-weight:500;color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+.hero-social{display:flex;flex-wrap:wrap;gap:12px}
+.hero-social--top{margin-bottom:24px}
+.hero-social-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;color:#D7DEE7;font-size:14px;transition:all .2s ease}
+.hero-social-btn:hover{border-color:var(--gold-light);color:var(--gold-light);transform:translateY(-2px)}
+.hero-photo-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-photo-ring{position:relative;width:min(280px,80%);aspect-ratio:1;border-radius:50%;padding:8px;background:linear-gradient(155deg,var(--gold-light),var(--gold));box-shadow:var(--shadow)}
+.hero-photo{width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--navy-deep)}
+@media (max-width:900px){
+  .hero{padding-block:120px 70px}
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-photo-wrap{order:-1;margin-bottom:8px}
+  .hero-abstract{margin-inline:auto}
+  .hero-affil-line{justify-content:center}
+  .hero-meta{justify-content:center}
+  .hero-actions{justify-content:center}
+  .hero-social{justify-content:center}
+  .hero-photo-ring{width:190px}
+}
+
+/* ---------- About ---------- */
+.about-bio{max-width:740px}
+.about-para{color:var(--slate);margin-bottom:16px;font-size:16px}
+
+.impact-strip{margin-top:52px;padding-top:44px;border-top:1px solid var(--hairline)}
+.impact-strip-title{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.impact-strip-title::before{content:'';width:22px;height:2px;background:var(--gold);flex:none}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.impact-item{text-align:center;padding:26px 14px;border:1px solid var(--hairline);border-radius:12px;background:var(--white)}
+.impact-num{font-family:var(--mono);font-size:clamp(24px,3vw,32px);font-weight:600;color:var(--navy)}
+.impact-label{font-size:13px;color:var(--slate);margin-top:8px}
+@media (max-width:700px){.impact-grid{grid-template-columns:1fr 1fr}}
+
+/* ---------- Research Interests ---------- */
+.research-interests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.interest-card{display:flex;align-items:center;gap:16px;padding:22px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);transition:all .2s ease}
+.interest-card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-2px)}
+.interest-icon{flex:none;width:46px;height:46px;border-radius:50%;background:rgba(168,129,60,.08);color:var(--gold-text);display:flex;align-items:center;justify-content:center;font-size:17px}
+.interest-label{font-size:14.5px;font-weight:500;color:var(--ink);line-height:1.4}
+@media (max-width:860px){.research-interests-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.research-interests-grid{grid-template-columns:1fr}}
+
+/* ---------- Current positions (Experience highlight) ---------- */
+.current-positions{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:56px}
+.position-card{padding:26px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);position:relative;overflow:hidden}
+.position-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.position-icon{width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-size:15px;margin-bottom:16px}
+.position-kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold-text);margin-bottom:8px}
+.position-role{font-weight:600;font-size:16px;color:var(--ink);margin-bottom:4px}
+.position-org{font-size:13.5px;color:var(--slate);line-height:1.5}
+@media (max-width:860px){.current-positions{grid-template-columns:1fr}}
+
+/* ---------- Timeline (experience & education) ---------- */
+.twin-columns{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.timeline-block-title{font-family:var(--serif);font-size:20px;font-weight:600;margin-bottom:28px;padding-bottom:14px;border-bottom:1px solid var(--hairline);display:flex;align-items:center;gap:10px}
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:1.5px;background:var(--hairline)}
+.timeline-item{position:relative;padding-bottom:32px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item::before{content:'';position:absolute;left:-26px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--white);border:2.5px solid var(--gold)}
+.timeline-date{font-family:var(--mono);font-size:12px;color:var(--gold-text);letter-spacing:.03em;margin-bottom:6px}
+.timeline-role{font-weight:600;font-size:15.5px;color:var(--ink);margin-bottom:3px}
+.timeline-org{font-size:14px;color:var(--slate);margin-bottom:2px}
+.timeline-loc{font-size:12.5px;color:#8A96A6;font-style:italic}
+.timeline-detail{font-size:13.5px;color:var(--slate);margin-top:8px;line-height:1.6}
+.timeline-grade{font-family:var(--mono);font-size:12px;color:var(--gold-text);margin-top:6px}
+@media (max-width:860px){.twin-columns{grid-template-columns:1fr;gap:48px}}
+
+/* ---------- Publications ---------- */
+.pub-list{border-top:1px solid var(--hairline)}
+.pub-item{display:flex;gap:20px;padding:28px 0;border-bottom:1px solid var(--hairline);transition:background .2s ease}
+.pub-item:hover{background:linear-gradient(90deg,rgba(168,129,60,.04),transparent)}
+.pub-index{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--gold);flex:none;width:44px}
+.pub-title{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.pub-authors{font-size:13.5px;color:var(--slate);margin-bottom:8px}
+.pub-footer{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:6px}
+.pub-venue{font-family:var(--mono);font-size:12.5px;color:var(--gold-text)}
+.pub-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--navy)}
+.pub-link:hover{color:var(--gold-text)}
+.pub-link i{font-size:11px}
+
+.section-head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
+.scholar-link{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:600;color:var(--navy);border:1.5px solid var(--hairline);padding:11px 20px;border-radius:8px;white-space:nowrap;transition:all .2s ease}
+.scholar-link:hover{border-color:var(--gold);color:var(--gold-text)}
+
+.pub-toggle-wrap{text-align:center;margin-top:44px}
+.pub-toggle-btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13.5px;font-weight:500;color:var(--navy);border:1.5px solid var(--hairline);padding:13px 28px;border-radius:8px;transition:all .2s ease}
+.pub-toggle-btn:hover{border-color:var(--gold);color:var(--gold-text)}
+.pub-toggle-btn i{transition:transform .3s ease}
+.pub-toggle-btn.is-open i{transform:rotate(180deg)}
+
+.pub-full{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.pub-full.is-open{max-height:20000px}
+.pub-full-inner{padding-top:50px}
+.pub-full-heading{font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:20px;padding-top:10px}
+.pub-full-list{counter-reset:pubcounter;border-top:1px solid var(--hairline)}
+.pub-full-item{counter-increment:pubcounter;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--hairline);font-size:13.5px;color:var(--slate);line-height:1.6}
+.pub-full-item::before{content:'['counter(pubcounter)']';font-family:var(--mono);font-size:12px;color:var(--gold-text);flex:none;width:38px}
+.pub-full-item b{color:var(--ink);font-weight:600}
+.pub-full-item a{color:var(--navy);font-weight:600;white-space:nowrap}
+.pub-full-item a:hover{color:var(--gold-text)}
+.review-list{border-top:1px solid var(--hairline)}
+.review-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--hairline);font-size:13.5px;color:var(--slate);line-height:1.6}
+.review-item::before{content:'\2022';color:var(--gold);flex:none;width:38px;text-align:center;font-size:18px;line-height:1.1}
+.review-item b{color:var(--ink);font-weight:600}
+.review-tag{font-family:var(--mono);font-size:11px;color:var(--gold-text);border:1px solid var(--hairline);padding:2px 8px;border-radius:10px;white-space:nowrap}
+
+/* ---------- Achievements ---------- */
+.achieve-list{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.14)}
+.achieve-item{display:flex;gap:20px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.achieve-icon{flex:none;width:44px;height:44px;border-radius:50%;background:rgba(212,184,118,.14);border:1px solid rgba(212,184,118,.4);display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:16px}
+.achieve-title{font-weight:600;color:#fff;margin-bottom:6px;font-size:15.5px}
+.achieve-body{color:#C6D0DC;font-size:14px;line-height:1.7}
+
+.grants-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.grant-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:30px;position:relative}
+.grant-card::before{content:'';position:absolute;top:-1px;right:-1px;width:22px;height:22px;border-top:2px solid var(--gold-light);border-right:2px solid var(--gold-light);border-radius:0 12px 0 0}
+.grant-card::after{content:'';position:absolute;bottom:-1px;left:-1px;width:22px;height:22px;border-bottom:2px solid var(--gold-light);border-left:2px solid var(--gold-light);border-radius:0 0 0 12px}
+.grant-role{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px}
+.grant-title{font-family:var(--serif);font-size:18px;font-weight:600;color:#fff;margin-bottom:14px;line-height:1.4}
+.grant-funder{font-size:13.5px;color:#D7DEE7;margin-bottom:10px}
+.grant-partners{font-size:12.5px;color:#9FADBE;line-height:1.6}
+@media (max-width:860px){.grants-grid{grid-template-columns:1fr}}
+
+.service-strip{margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.14)}
+.service-strip-title{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#9FADBE;margin-bottom:16px}
+.service-tags{display:flex;flex-wrap:wrap;gap:10px}
+.service-tag{font-size:12.5px;color:#D7DEE7;border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:20px}
+
+/* ---------- Skills ---------- */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.skills-col-title{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:17px;font-weight:600;margin-bottom:20px;color:var(--navy)}
+.skills-col-title i{color:var(--gold)}
+.skills-list{display:flex;flex-direction:column;gap:12px}
+.skills-list li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--slate);padding-bottom:12px;border-bottom:1px solid var(--hairline)}
+.skills-list li::before{content:'\2192';color:var(--gold);flex:none}
+@media (max-width:700px){.skills-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ---------- Contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:20px}
+.contact-info{display:flex;flex-direction:column;gap:18px}
+.contact-row{display:flex;align-items:center;gap:16px;font-size:15px}
+.contact-row i{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:var(--gold-light);flex:none;font-size:14px}
+.contact-row a:hover{color:var(--gold-light)}
+.profile-links{display:flex;flex-direction:column;gap:12px}
+.profile-btn{display:flex;align-items:center;gap:12px;padding:13px 18px;border:1px solid rgba(255,255,255,.18);border-radius:8px;font-size:14px;font-weight:500;transition:all .2s ease}
+.profile-btn:hover{border-color:var(--gold-light);background:rgba(255,255,255,.06);transform:translateX(-3px)}
+.profile-btn i{color:var(--gold-light);width:18px;text-align:center}
+.profile-btn--tbd{border-style:dashed;opacity:.7}
+.profile-tbd{font-size:11.5px;color:#9FADBE;font-weight:400}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ---------- Footer ---------- */
+.footer{background:var(--navy-deep);color:#9FADBE;padding-block:32px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:13px}
+.footer-inner a:hover{color:var(--gold-light)}
+
+/* ---------- Reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+<header class="site-header" id="siteHeader">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">M<span>.</span>Elkholy</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#interests">Research Interests</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow eyebrow--light">Research Portfolio</p>
+      <h1 class="hero-name">Mahmoud Elkholy, Ph.D.</h1>
+      <p class="hero-role">Postdoctoral Researcher in Electrical Power &amp; Energy Systems</p>
+      <div class="hero-affil-list">
+        <p class="hero-affil-line"><b>King Fahd University of Petroleum &amp; Minerals (KFUPM)</b>, Saudi Arabia</p>
+        <p class="hero-affil-line">Visiting Researcher, <b>University of the Ryukyus</b>, Japan</p>
+        <p class="hero-affil-line">Assistant Professor, <b>Zagazig University</b>, Egypt</p>
+      </div>
+      <div class="hero-social hero-social--top"><a class="hero-social-btn" href="https://scholar.google.com/citations?user=Y2ATJeoAAAAJ&hl=ar" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+<a class="hero-social-btn" href="https://orcid.org/0000-0003-3615-3714" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><i class="fa-brands fa-orcid"></i></a>
+<a class="hero-social-btn" href="https://www.researchgate.net/profile/M-Elkholy" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><i class="fa-solid fa-flask"></i></a>
+<a class="hero-social-btn" href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=M.H.%20Elkholy" target="_blank" rel="noopener" aria-label="IEEE Xplore" title="IEEE Xplore"><i class="fa-brands fa-ieee"></i></a>
+<a class="hero-social-btn" href="#contact" aria-label="LinkedIn" title="LinkedIn -- link coming soon"><i class="fa-brands fa-linkedin"></i></a></div>
+      <p class="hero-abstract">My research focuses on the optimal operation, control, and AI-driven management of renewable energy systems, microgrids, and electric vehicle charging infrastructure, including real-time digital simulation and large-scale multi-objective optimization. I have published 52 peer-reviewed journal and conference papers contributing to renewable energy integration, intelligent energy management, and future power networks.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="hero-meta-label">Ph.D. in Electrical Engineering</span><span class="hero-meta-value">University of the Ryukyus, Japan</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-label">Research Area</span><span class="hero-meta-value">Electrical Power &amp; Energy Systems</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-label">Current Affiliation</span><span class="hero-meta-value">KFUPM, Saudi Arabia</span></div>
+        <div class="hero-meta-item"><span class="hero-meta-label">Location</span><span class="hero-meta-value">Al Khobar, Saudi Arabia</span></div>
+      </div>
+      <div class="hero-actions">
+        <a href="#publications" class="btn btn-gold">View Publications</a>
+        <a href="Mahmoud-Elkholy-CV.pdf" download class="btn btn-line-light">Download CV <i class="fa-solid fa-arrow-down"></i></a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <img class="hero-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEAwQFBAQFBgoHBgYGBg0JCggKDw0QEA8NDw4RExgUERIXEg4PFRwVFxkZGxsbEBQdHx0aHxgaGxr/2wBDAQQFBQYFBgwHBwwaEQ8RGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhr/wAARCAGQAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6YoooqTQKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiimOysFBIHv9O31opUBZ9sYzkZbHQfU0E3EIx14HYnofoaBz2rndb+IPhLwvBK+teIrC2kjJxBHJ5rZ9MDpXluqftZ+BbHf9jstX1SQcBoyiKfzpDWp7pj0oJwM9vavlTVP2wrxzt8P+E7fH9+8kYt/wCO8Vif8NY+NC+f7D0sp6EuKhziilCTPsXcMZPA96XpjPGfWvkO2/ax8XLKrSeGtLmUHlSz4rpNH/a3l86T/hJ/CEiRt906XMN3/kTikqkWU6bPpcEHkMCP72ePzpRk9jj1xx+deJ6P+1R4I1OUR6nFqejJ/wA9buJWUf8AAUFdvpHxe8Ba9OsGk+KbSdycDcGhBP8AwPAquZPYjla3O1AyCRyB3ooB86NZY2jlixkPE29T+K8fnRnjPamk2S3YKKKKYwooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKMEHGC3pt/i9h70bgI2MfMSBnoO9P2uzhIgzTHhURc1T1PVbPQ9Pmv9YuY7OxiH72WQgBfQfX2r5W+JP7TGoeIY7jQvhvE+nW24xS6jvImmU9cD+H6iiUlFajinOVkezfEH47+EPh1cyWV9PPqOq7DttrUAsH9HJ+UD6c18x+MP2i/H/jqCa00+SPRbB2IWK1UhkT0LdT+NcpZeEby8lNxqEzXM0zbnaY78n157121l4YhtUUeWXfHzE9682piVHY9CnhJyeqPMU8K3V7Kbi9me4kcZZz1J9z3rYsfCBIwYQw9xmvT7fw5kDK7U7A1rRaGsajAAxXHLFyPSp4HueZw+FAvVAv0GKmfwmHYBUJxzkV6YdPVj8qg/hU8OlhRkrg+lYOu2diwsEeYf8I4dnyR7SOOarXHhqUc4BP0r1ttNTH3MVUl0cv8AdXIpKsxvCwex5DceH5I+VQv7nrWZc6ADh3h3nPPqK9jn0uQAgoB+FZs+g+ZyFIb1xW0cQ76GE8HGx59oni7xR4RuUk8Na3e2ghORE0heP6FDwa948B/tURzTQ2vxIshaOw2jUbIZH1kQ9PwrzO78PHLMqKGx121zeq+GCY2EcQA792P1NdkMU1uedUwXY+99O1XT9ZsYr/SL6DUrGVQ0ctu2Y2B6EnqD7VcIKsVYFWHUe3avz48F+K/FHw01P7Z4andIQ376ydi0Mo/3TwD7ivsP4Z/GLQviREIYCum60qgzWMkmfqyMeSPUdu1ehGpGWx5k6coPU9EooPBIwQBxz1PuPaitbMyCiiikAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFGM/gM0UjYxycD2oAdgldw6Yzms3Xtd07wxo15q+uzm20qxXfMwOGB7BPUmtLyy8uNoLzD5SThVUdzXxZ+0F8Sbzxp4wl8PaZdkaFpsmEijPEkw4Z29Rniom+WNwjFzlZGH8UPijrPxb1drO1EsHh8SfurIHBcdnf3qfw34J+yr5lx8wGAuRyB6UeDPDUdqBLMu5yx+f3/ALv4V6FFGFT5BxmvFq4hybR9BhcIkk2V7TS4IlGEBxV+O3jJ+VQKfFHv46VehtgmO9cDbuewqaWxB5DYAXHtmrENnI3BAz6Vox24wpxWhDbjG7FZNmiVjGSx9sH3qZbEkda2Wt9oBx1qYWo2jjFK5XKYQsD35pPsR7cVt/Zipz2pBbZNLVhaxz8umn13VVk08AgYxxXVPb+1QPahhytHvIDj7jTAwPHFZNxpSkEFT+Vd1NYgAkdfSqNzZYTIHP0rRSkZuKZ5jqOjISSAFYccCuRv9FuLK4ivNOkls7u3PmRzxHa6EdxXreoWYBJxzXOXtmCrNIpK/dIHUg12UqkovU8/EYVTWh7J8FPjJH4zgj8P+JWWLxPAm5JW+VbpB3Ho3t3r2Tqa+Fri1u9I1C11PR5jaXtmwe3lX27H2r7J8EeK7fxv4ZsdYiRVaRPKvIweYZFHzR/1z717NKtzo+bq03TlY6Cig7s/Owc+o9O36UV1rVGIUUUUgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAClDbDn8/pSUqoZGVEGWYgKPU9hQB518a/GsngXwDdSwYF/qLGxtQD83zDJcfhXxr4c0mR7nzLgszMcuTzk16z8c9c/4S34hS6fFMz6doy+SqZ+7J1Y/UHisHSbVY0HyjOOuK83E1eh6GFp63NbTlEWAq8DFdBbqxXAGBWfbwgoAmM+talvuTavXmvIbPoqaJ4YyDzzWjFCWC4pLaEuc4rUtocNgjpXO7nanoOt4eMHpWnCiBQG6VCiDOMVMI8YqbMzbL/kwyRYU5PbNWBaRlAW64qokwGCQMD0pwvBHzyQTWkY2GSNbRH5ScGqzwiM/Lgj3qTz9zZXA471DMvm98GtJLsMXCtxkUx4VHeoyfL6c0/zQUOCDWQynLAC3ykiopY0K7SBmrZlHIIzVaYA8gGgDndQtQWPyjrWFfWW0b1XDAEZrqrz1xWNfEPEQBjNaxkZvVHD3KbWO3g9M4rs/gfri+HPGX9mPJt07Wf3aKT8qSryp+rE4rm7iEqSRjd2yKwZhPDNFc2JMNzbyLNE2fuupyp/Ou2hO0jxMVT0vY+2cEEhhhgSD9c0Vn6Dqba1oWm6nIMG6t1djnPzAYb9cmtD3HI9a91PmWh4HUKKKKYBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFDaSBJthWfrusx+HtGv9Tlcxm0gaRCBkh8fJ/wCPYrQxuLAcYG4++K8g+PXiZLfRrTw9bPtvNRYTzsOqwqeF/wC+uazqSUYXZUIuUrI+eLcz3895fanlrq9mad2A6sxyc/ia6fTkZvk2gEcYrFt4yrOELlRz9TXUaRFuKykc7QDXg1Pfdz28NGxqW1sybc45rQjgYsBTI0UY+U5HeodS1mDS4me4nVVAyfWsOW7PWU4xWp0ljAVHNX1ZEOSy5+teR6l481O522+gWksyvxvAqn9j8UzP5tyZ4h1wDW8KKe7M3iUtj3KKRGbAZSfQGriQiTGOa8CfXNdsGTbaXEpBxuGRU0PjLxiFd7OFIlHOJDya2jhlLqc7xivsfQYtTjG0VDLaHA4FeK6d8dtRgZ7fVtN+cLgupr1Xw/440/W9PtpHQwl+Dk80pYdo1hjFLdGibZh2xTVjKnkV1VrpcF7CJbeZWQj15zVO50eRQQn3u1YOm0dSrRexzM0Bc/u+lRm2wnB571qtaSRyYYVHJAwJOKycDZSuYcmUz61Wlkcitae33NkgVUaNQ2OKjlQOSRkzjKc8GsS7XIPtXT3Mak8AZrFvYDg/L1pcrRCZyt3H5inbwQOK5+UZl/eEgFthx/OuovF2AgiuYu3wZNtbU7tnHiY+7qfSHwUuhd/DrTk80yyW87wsCenJOK74DAGT83OR+NeVfs9sW8Dahnvqx/8AQBXq2BgYr6Gj8J8pNWkFFFFbEhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFR3M8NlB595cQ2lsnDTXDbd30AqSvNPi7EZn0y3Z38lYTKyq2ATWNafs4OR14Wi69RRPQbHVbDV2I0e+tr5kzny3OAcdOea+Y/izPJqXxC1d3k3rbhUjVRgKNoyPXrXRaLE80cdxb3UtjdqMedGfmC+gNcN4m02+0+7nvb2V7555C3nyfM2MdzXlTxvto2aPTnl3sHzJ3MaNzIIlzgg9q7fR4CyAYyvU1xekwfaZowxGd3Nek6bCI12rjNcjZ00IEhgZ8qoPPpVeTwml5LHJeorqhzg966a0jVQMgE96W9bKnaGPHQCkp2OxqN9jLt7K0skISKOLb028VLHqMW8CWVAO4PJri/FGoalDkRQcD7uD/OuWu5/Ep8P3OpQXdvC8XKwBd0mPYd6uN6rtexnKUKSvy3Pb7e9tDHyISv8AtJ096p3J0+fKG3t3U/xJivmvT/iNrrW9w+p6+kMkSZiiNoGDtn7p544r0fwDY+LPF2jyavLawxRKeybS49QK6nRqQV0zlVei3qj0I+GNDvUZPssSM3Xjn86enhGOxYPbEKQAAAeMfSuestRubK4MVxGyFTg+bwa6uK9kaP738Ocsa5uefVnb7Gm9i9pNxqFhdII5iYscr2r0u1vjNCjyqC2OvSvKbDVA5O4A47101vrRWADjJ96anpqNUEloa+o3cSTHA4rjNd8TGwkAKHyyOX9Paq+t695ALFsEVy4lfX2xI2IkOTnvQpa6ocotqyIbv4hkxS+Ty4JCkiuOm+KeqxM7Gy84Keo4r0tfBFlOiiVFG0b+OhB9/Wqn/CtNN81niLlT1X3reM6fVHFOjVezPP4vi+rAi+ia1kLAKcZFb0PxAsZsLPxuJ2svO78O1TeIvhvBc2xitHijO4c7AelcjqHw1ljtc2t6wlRifu4BBpydJ9TJQrx1OpuNRttRgeS1kDgA5HcVycx/fCM/OxyW+lc1Lbap4OvkmZ2uLKTAfByR+FdDJKk8cl3Cw+ZN30Heo5FFpoipUk1aW59FfAC3aD4fNM/KXWoNIo9Bjb/SvTyACNvPX+dch8LLKLT/AIdaBHb5KywGQ59SxNdeABkDpmvbprlhqeFN+8FFFFUSFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAV5z8RstfvE/JFvtWvRq81+I1pIdetZQW2TRLg/wC1nmvPx1/Z6HsZU4rEanNw2KQaUqrxKi9a53VJU1DTJoJCGKKa9Ij0xLW3BY5OMAmvOPFFsbOWaUSAqynI+teDTvbU+hr2dJ2OP8MWihJHb++QK7q1Cx4JrmdHi8uzh9SSa6O3UuorokctGOhpregcR9al+0yqMkDFMtLcYya1Y4gFxjisrHWomNJDHdZEqglumRVZvCcc65SFM9N5Pb0rclg+bIFRtvT7pIHpRyu+gnBHE3vwr0mQ+Y2lRQsTuLdcn1rctzrun2kdnZ3C2tsi7UROOK3EmlYbSN31p2fL5KAmt3OdrXI9hTe6OOfQ7m4l33s808mclvNq5ctIsKwoWCgYyzZP51vTTrGpZVLue2KyZ9zguy7Se1Re50cqRBaJtZUB4J5rYWYRrICx+WshGYnHStAJiPO7mlazBnJ+KGeRJHDEKw4rb8Na1p+l+HvOuWP7pvnwuSTisPxDJmJ1IrM0CaRZAISrdijdGqzF6neDVtY1Z0XSrOV4ZOUYjjnp+tcFP8TdSi1+bRLPRLm/1K3dlkRDj5x94foa7DTZ4oLoPaPLpdxyfkJIY1yvir4Zz+IrqTU1v5/tNyMl1bac/hXVS9n9o46qq/ZM2H41aXqExgu7SXTZVO1kc8qfQ1uHxLa3kIaOXehGBg+tcf4Z+GZ8NX5udVtv7Rnz8qnkH3JqDxF4UurjUHvNPjXT5CeYlPBoqqk/hJpurH4joJ7FdXtJ7R8sxUkZrlzbyaXot9A4y6owXPpXYeGrW5hiUXh3S45NY3jWMJpN07D768/hUwd3ZnPiYe5zLc+pvhoS3w78Llhg/Yxn866r1+teF/A/4mPc+H9A0LVtNcRD9zBOD95icA17vJG0LNG5YsjFWJ6ZFexTmqit2PCqUZUrOXUZRRRWpkFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVzvje18/Sbe6yRJZT7l91bg5+nauiqjrNuLzRdTQgsxtWeNfVhWNaPNTZ0Yep7OqmedNrqPshkZWGMcda4Xxg5e1lYxleQAfbNTLi8vFjVzbtHjcfTiqPidzBZmJ7kTruHOPevm4xak7n19SadLQo2C4SID+HpXSWigqM1haYm4oK6KHCA54FVLQyo7Glar0A5rYgTeNpArBgmIZNvINb9m4x8x5pJndHYuJprMO2KZNpWBu25zWnayrtGelLd3aKNiEe1aaCu7mMmnoTg4UVMdPtY/mlddtCyGVyAcAdeKr3syZEbKCB3pcqHqVdUubOxXciL8w/irkrnVYpGbAy3t0q9qKLc6kq3cu2E/d9DTzpljEc74wAe7CnojKTk+hXsYfPjDla01ts4CKD9au2UVuCqRsrKRn5Tmtv7Dp6QBmuAsh7YNO19SU7KzPNda0tZ9+/IbHauX0KyL38kOAWU/KDXpOuxwQQl/MG45AxzXnIkNjqy3UZ4H38dhmqSZLZ1sNpKFKTLlu2R0p5guISQhZ1Y5wx6fSun0qe21GGI8EyjggVonRiwJVM1lZ3Nk9DhJpJySu0op6he9Zk9qZc/u8Y9a7+bTSp5SsybTwS2RjFJaBKF0cYyGIZwVOO1cp4zZW0a7DDjaPw5r0TUIVQbQuSa8+8UqLjSb8AZBiyvvitYas86slHc9f+DHhltQht9ZNqkemWkQSB5PuvJt6r9P517IG3KjLkhlyST1OetcB8ELgSfCrw/ENx2KZMHoTnFegFQCSOcngjgY9K9vDxUYnz2KqOpJJvYKKKK6DkCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKsWIR7uHzFyrOFdf9nvVelWTyyr88dSKUleLQ42Uk2eAz2Ev2+9eAdZpMY7fMcfpWLrulynS5ppWwVK8/jXvWpeFdOvZTLEXtmYZJRfl/Eetcx4x8EWaeFNTkSeWaWOLeGAwoxzzXiVMNNS5rn0UMbTcOU8n0p9rjI3bR2rooohIPlPJ5xXM6LkhJF6bQR78V1FsRtQ4IPfFclU7aDvG4W7sk209jXRWkpxyKyVCNcgYC5HpW5p9qZSyjgAdawR3Qegs+qrBHhVOazzflyJZGIU9KdrsSRbSXK7euO9c/Pq1hg/aJhGinBB459q3iZtyb91HStqqxrtQdR1qpJdiccnDVhS6xbIu8XCqij+NcBR6571JDfWbAD7Ukh6+YpHP4Vo010Fdrct3tqt7B5bFQ+flINQGxDRiOS3EvABbPNW4WtpR8kyB16MuCFrTtoWKloMj/aZRz71d4kJ1TmJ9KutLuIJrCRkXOWUnt3qWfxG0UryGORpMfKK2LqWdLmMzQPNGBztWo5xa3KyEo8Bxx8nSri42M5ylfU4S+vr/VL7zby6jsoU/wCWaDrTTN9oilSOMMDxvAxn3rY1C1t3BMUR/LrWXv8AI+TBUU210BTvpY7Hw1MunpAgbccDPtXpFldq4AbHIrxrTb5EZctyfeuy0zVwzKCxx65rmbs7nWrNHV3cKsxIIwawb6MID0rQlu9yADnI4NYl7c4Vge1KxMmzldblChsccV57qsE2oO9nagtcXmLWJB6ucV12vXSljuJx3xT/AIcaH/bvjazefJhsv9Idl/hC8ofqTW1FXkeXi5Whdn0B4b0SLw54f0zRrdQFtLdEYj+9j5v1zWmDngdBT3LF2L43E5OPem9OnAr34qyPmpXlqFFFFMkKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoHG4LwD2oooC66jg2AAc4A6Z4qnqcC3Ok6pC4LrJZTgLngnYcfrVqkdgkFyxBIW3lOB/umom1yscbcysfKPh28EaxRSswbywnTow4xXd6dIJIyCed3XFeVvIdO1O6Ryx3yGWM/U9P1rttH1QsAjOufTPNfP1Y3Z9Lh52idZPGIishOSOlbGj3q+YADg55rFLrLEBHl93pVnT41SXhufSsbHdCZq69B5jrgBgRzxXC+JfDEGqxcLsdBlSvrXo0yiSNd3YdayJ4Qy7XGBnII61HM0zdRUnqyl8OPGWhabYjRPiBptveEOAk0tqDgZ716daeC/hv4i8QyX2lCyjj8obokwqj1OK8f1XRo9QckH5gB1HWsU6NdWEkrW3mQ7gATETyO9d0aytqcVXL1Ud1Nnt2ifCvwp4i8Rah/ZsjvpMBxIsUmNzexotPgldXWs6jbQ6vPZ6VCR5D48xsHtz6V5N4e1nW/DwU6LqUkGXO+Mrxjtur0DR/jLrumW+dRt0uCsgLtjG8H/CtYOm+hnUweMhtIl8Q/BjxHY3llZ6Frf21LkMWeZfL8sD6VyGtfC/xz4f8AIW5EV+biXy0MEhb8TXog+PRjuhLcac3kjOwpyfp9Kq6h+0HbzSxE6XOrRNujCScfjVuNJmUfr8OlzzDVfDPivRL6Kwu9JmubmRdypCNxrkNU1X+z5Wi1i0ktJkbYyuOVPpXrl3+0GP7Xe5/spghQhY9+Sp9d1eQ+I/GVx4jnuWl02IySsdhPJX8alqmtUaRq4ib5Zxsitb3cNzMPs8jZB6Yru9Pt5o7XfcARjoCDnNc14T8OsiRT3xAmBzx0xXdCze+P2W03CAkBif6Vw1Z22O5J2Ldo7yWbNnJT5fr71ialcFMr95/rXT6h9l0fTlt4+WUY56n3rzfVtRMlwyW2XkfgY5xURTZc52RiavcqZ8lsIvLN6V7B8Cre3/4RfUb5VQ3Ml8baeQHJ2qAyqPzzXid1p2oXbtY6TaS6jeuCRHEu4nHWvoz4aeFJPBvhCz068KvdbvPuSn8Uh/w6fhXp4anZnzuOq3VkdcPx/Gig5zyck85or12eM3sFFFFIYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAU2QboZ1xndC6/mpFOqa0UPdRK5wrMAfoaifwsuHxI+PPGGluzmW3yHhkKNj2qHRtQZdrM69AK7zXbSM6vqttj5DeSgfTJryvVNMk0SdpIATHvJx2r59T99xZ7bi1FSR6pYamPLADYIxXR2lwqorgZJ6mvIdH14zNHvIB9DXf6dqQZdu8Nn+GpcbaHZConqzukvFkjAzUb4Zj6Vj299EpVWwD7GtAXGW4GV9axkrHo05omEC9RjPvUi2+SMoDTMqQG6j0qxHPGANzYpo1vcmi022IYugEmcnA61Yv761u7L7LJa28UajG8jBNNj1FY14AwapXiQz43DHOciumD0MpKpfcw9Q02K4CiyaJQvHHWsG58O3AOVkWuslSC3cOqlhjFQTSrKn7sAGok9TdVJwXKzgZ/DUm7dLIMe1SWugRQMGJ385zXTN84w3IqvJgDHA5qGzFu+41ZPKCRxcdq6JL+OwsgykCQiuUd9kpJbhaz7zUsgh8kDvUuNzNySLOsapNfOQD8xPrWVKyWMB3/NLIM/JywA7isnUtVitYDcTSBVTJc4OcE/KB716n8Kvh/KfJ8SeJUG4tus7ZhyoHRiD612UKTk9TzMRiVBWR1Pw28Gjw3p51G++bV9QUF0PWGL+FR7+v1ruaGbcQ7gqz8iivbjFQVkfOzk5u4UUUVRAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUep7DrTVr6g9gyMMWIUKAcnoaw9X8aaV4d1CK0uZDcantE4sYv9Z5YP3m7J+NZPxP8eW3w+8J3OpOySX8qmOwgYjJkI4cD2688V4r4FivZ/hv4j8VXNw15r2o5kubiUEu4HXB7ADt0qd72L0SRuveR6pqV1dxjbFPcPIoPUZJOKo6vokd5EVKgjHIqt4VcTafbOeVkhDg/7RrrFgOcNjPevk6kl7Zn1dOF6KueK6r4dmtHaSzV0ZTxTNN8QTWEhgu98Tkcu3SvXNQ0rzlZR8rHkcVxuueFlmRjNjcRjIHStoTvucsqTTuiGDxN8qSI7MoPWu70HxBBeQZaQE46V4zcaLqWnti3kV4AM4qG11a8sHEwZh3YCtuSMhRqygz6NjmXYvzA7u1PNsXwQ36V5bo3juK8toxLL5Minqe9djZeLCsf+vWQdqPYnXDEnY2ujzzKSELKPemzW5hVlkkGV7CuTbxk7DZHK0Tj7wB4qNPEkdxMv7/73BXrVqnYf1i5uXBeOPOQVPrWHLK4L5bp6Vbk1iAxEbeQw5zXO3+pqnmFGH0zWUqbvoaxr3WprG6iVSSeAPzqld3kaoDu28Z5rm7jWjGN88ixxRjPJxmuQv8AxTJezyCBswkcH09quNBs56mKjE6+XWAZSy5wfU1j3mrXFzNHb2sbXEsrhEjjGWLHoMf5xXE3vixIYzDADNckEKi85NfUfwR8DQaJ4Y0/Wb+FbjWbxC3ntz5Cn+ED+96mt6VC8rM86tiXa6M/wD8GjZyf2z45HnXqSRtbWOQY48DkP/eOfSvZD/rG3cqV7DGD6D2poVchgjMRwMtTiCOGOW7+1etCEYbHjzm6juxoBG0liSBjmlooqyAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo44GcZ7jnH4UYwOj9cBivBoegbhWH4p8Wab4K0iTVNeuBDHED5MIOWmbsAO496w/iP8AE7S/h5prm5ZbrWiMwWCNy49Sewr408XeONY8b6q+o65dPI5BVEX5UiX+6i9AKydRI2hDmH/E3x/f+PdamvtRkURKNkVuhysaZyFB7ivpD4JQrrXw4+xS8JcxvDj2YY/rXx9KBsdIwoRR0A6D0FfVf7NGqrc+HrjT1cCa0lDAn+7jp+daYRqUnfqLFR5IproVdE06bRmbTrhSps3aJAf7oPH6V2Fpslxu9K6Dx34XYTLrdih/eEefEOSvHWufsY8x70OQP5V85mFB0q7dtD6LL66rUUrmgsAcheMe9VL7Sw3WJCmPm47VrWrIVBIDbvbpVuSASIduMY71wxvuehKJ5bfaZteX91Hs7cVgSaPE8TFo4/n68dK9evdFWdM7Vz7CsG70ryFZQic9fkzWym1sclSlGx5JdeFo5FUoQgUkrs9ayDZahaBvImkX5q9XjsCk5C7SvcbcVDPpSs7Fo+p7V0RrNbnPyJHlEt3q0JcCdm55OzrSQ6zfW0kbiFnxyWzj9K9QutKiaNlb7mew5/Oqt14btvIBjAZiOVIya09qRyM4yLxZdRb5DAd3uc1l3Pi2+uJGEKRxlv7wrrpdAtckeUQ2OgOKzpdEt42GyJVI6FhmrjUQrSRw893d3gMl65dB/Caz3We8cJFvjiHXFdvLpsbt8sf+FT2WkKkm8gDttq5VbRujJ0XNmDonhiC1InVWeV+Nx9TX3Fo0CWmi6ZDAu0R2MCn6lQWr5StLQvqFjEgYBrmJcKM9WA6V9fPC0BSJRnyV2MFH3SOMn2rqwknP3mceLSiuVbjTjJ29M8UlIOnFLXonn7BRRRSC4UUUUDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFAJ+6Nx9BSYIOCMMeinqaXYXACgse3OAK5vX/Hfhjwyjf25rFpEwP7xIJN8yeny96L2Glc6PB+bAyFOCR2NA+bft5CffPQL9c14N4n/aX0+2inj8MaW17dAgR3V4NsZHvH1/WvGPFPxZ8S+LWZdS1SdID/AMu0L+XCPovX9azlVSNo0Wz6v8QfFTwf4WYDVdbhdmOJIbT97Kp7fLXkHi79pcyR3Fr4T0+SB2+WG+lfDqv+52NfO005LLkZyefly351GiFy7DBHqetYupc3VJR3H6nqV3ql81xqNzJeXEjFpJHPJPt6H3qkH25Q8iph1LGoHVdu7NTuaproV5GBYqBhTw2PSvXv2e/Eg0Pxpb20jYgv1MTf73UV5GeOBzkZq1pN3LY3sNxauUniffER/fHQfnWlKXs5IzrQ9pBo/S2ONZImgmTeHX95kdfauA8R+GH0S6NzZLvsXPzBedv4elbvw48VR+L/AArp+qK372SJUn9pgMMPzzXX+RHNCYpsMrcMh7j1r2MRh6eKo3tqeHh8RUwVazeh5HARgbNuDyMHrV6I5TceParfiLw5Nokz3OnoZLFjyf8AnnVCCVJEVkO/PJ9q+Fr4WVB2Z95hsZHEpNFjfnjAqC4tRKjE457YqU/MeBTgWXr0rBbHU4q5jSaTHIhUDa/XIFULvSGUL5ZzjrXUGQHAx9af5cRGVAJp3M3FHn32SdWYTp8p6Y5qO4RxGQE2nH3sc13k1ijjIxWZcaapJyRT5yfZo84kJOUlDbuobbWXNavO2GA216Bd6XEuScGsqS0hVugq4zE4JHHjT+flX86k+zeUQXAJ6DFdE9spzkYrPu4UjK5rXmuiXFWM/R3SPxRpTSHIM3C7scjvn2r0XxT8d4/BXihNI8WaY82n3SLKuoWzZkEY4I2dznHFeOzTlfE2kiNsYmY/kK6j9oXSv7V8E6PrKqq3FnIpdsclCP8AGvocLTUaHMfM4qV61j1TTPj14G1i68sanJYlufMvYfJQfU84rtdO8SaLrEqx6PrFhqBYZUwThgfxr877a982P5/k7EZDK319KfvktXHkyPHn+GOQhT+I+7S5g9g2fpAflOD1zjGQaMHGQpP0Ffn9pnxA8UaSixaT4g1CzCHIXz8hfoTXX6V+0X440iIpc3cGqZPD3sXmfyxVKdiXRsfaZVhnKnjr7Ug+b7nzAdcV8w+H/wBqy7hV18U+H4NRK/cFhJ9nUfgc16BoP7SHgvVo1/tX7VpN0x4jaIzIv1YYx9apTT0IdKyueu7lJwHUn0B5paxtI8YaBrwH9ja1Y3shH+riuFZh9V7VtMCpwwwasyEooooAKKKKACiiigAooooAKKqX2qWOmmQalf2VgYxl1uLhVb8BnNcHq/x18EaSrhdQmvpkOPKhhIz9GPFQpJMrkkejHp94r7igKclVGwjnCKefqa+edW/ahjUn+wdEQ/3ftz5z+C1xGp/H3xrqSTRx6gtlay9YoEGAPYnmk6hpGjzH19KpihM02UgX7zOwQD8TXO33jrwxp0byXWvWAVOCsT+Yy/UCvim88UatfKy3uo3dwrHOGuHx+WaynlZsZII+mP1rP2jNFRPrjVf2hPB2ng/2ebzVCOqRxGHd7AtXnOr/ALTOrS+dFouj21vG33JpwfMj/HpXhIYn5RkA+9LIgYjcvI6HJqJVGbKitzrdf+KXi/xBbGDVNeuryLPCqdgA9iuM1x9zdGaTdKwdgO53H8zQ0aSyDzCDx06foKjaEAHYAR7VHO3oVawwyb/U1CVYuSaljOw8rTGB3ZBoKGBm6HrU6oxWmIhJBHPtWiEwmBGxoAz1jO3kVBMp9K1mj8uPJ+U+hqq4jKKXyGJ5xTQGWRzhhUsKAOrJ1X5vwHWrLwrkn8qYEKkMAQoPJ/pQ9gPfP2dPHj6FrB0K+lB07UzvhyekvYflX10XxgnG7HNfm/Y3xsvLltGEU0L+bEw6qw6Y9q+7Phz4nPi7wlpmo7kaaSNUfaeAyjDZ/GvawdXmjys8PHUdeZHbqVnRo3XcGHII4I71wfiHwpLpTSX2jxmSzcEtb91PrXcQ53EoSFByKub8gls5Iw2O49K3xGDjXjys4sLiquHlzdDyG2uobgDyz8q/fQ9VNW2bcN2etdD4i8EfaXa70XEFxjc8a/db61xsV40crWl2ogvEOBG3G/3WvjMVgp4d+6j7rCY+jiFq9S4SP4+PSkyf4DUU0wYDbggdfUH0qETA8FiPpXlxu3qei7botMz7fmNUpmGDzQznJG/IqnPJjPORVgULrgkg1kzqWb7wq/cksMgZGareSDyRSEyqVVVNY2psCitjvit54xyBzWTfwMyYC8A5rVOwjzbxDCd0NzESJIJQ6kevava/FOlS+IfhE5Cq88lt5rA/3hyf615vcaabicQheZWx+Jr3hNNWDwtFZzLn/RhG4/DGfxr6HLpOULHzGZ+5O58FybEl3Q4WObnHp7U4kwoEPzgelafjLTDo2uapY+UI44Zi0XqEJrGjnXBQEknofaiUbNl0p3ii2CHjzuAx2pmADn5sVHErEA9OeKladgxXdk1KKHYU8jIJpp46nAp+0sgwRv75pvlOoznJpgOgupbZt1vI8R7mMlCfxFdXoXxN8XeGYXj0PXbu2hmOSmfMX82ya5Ncg/MSKc0a5zyT9aBWPcdF/af8TWltHBqtnpupiMndcFCk7D03Z24HbivQ9G/ag8M6hGv9q6deadIPvfOHz+X8q+RzGSfm+ap4ZpIz1B4xyop87QnTT1PvHR/ix4M19A2meILZPWK6H2b/ANC611tncxalbm40u4ivbYdZbRw6ivziBBJwi89cjP8AOr9p4j1GxRYrTULu3jU5CxTMi/kCKqNRoz9gpH6IkkAMcAHjB+bd7nHSl65C8Y6helfFej/H7xpoyQQrqxvLeLG2CeMFSPcgZr0rSP2pg5Q+INBVSRhzZPjP/fVX7S5jKjyn0VRXmGl/H/wNqSRCTUZrC4c8xT27YH/AhxXoFprukagsR0/VrG6MwDRrHOrNg+ozkGtLohxZ8BX1zdahO9xezy3k0nVppS5H51WwyqFYHA9W4pgk46Gk8zKkVxno6Eokwvr9AMfn1oV5M9cD0qBZNpxT2lORgUmrgTF+elJkPznGKTY23PrUIBJIzRcpRLAk29BnHekEm4/NUJUp3pVai47EyqTJkEYqV02x8MM55qvyAGz1qQEkeuaLk8pXYuuc80kYyvTmnyjB+6eaeisvcYouIbbusEpMsbP7CrH9p2hbDQy27d2JyKjbJOBgmmbQD86hqYFrzY5Gzb3CSezVFIuVYbM+hqm1pGxzsI+hpnksh/dXDk+9AE4gLlQkoCnqCOc06SP7OduCzfpTY4bhkCM5J3ZBNPwsbOJ3347d6dwGZLfe2rXuv7NPjh7DX5vCt3OFs9Q+e2djgK46gema8GLLuygIHvVizuZrG8hubRzFPA4likU45BziuihU5JmFeHPDQ/SqIs3KrgHtViM4YHuO1cd8NPGEfjfwnpurIV82WMCZB/A46g12ipg19DFua5kfNSj7OXKwCrgqCVYnJf8ApXPeJvCdt4ggYuBFcDmOZeGU/wCFdJtpMcMOhzxU1KcZx5ZFQm6b5onhN6L3RrwWWugLKTthnHCyD0PofrRu5O49P1+nrXsmuaBY+ILJoNTgEkTjDFR8w9xXjWueHtT8Fy4lV9Q0Mn9zcAZkhHp9PfrXyeOy903zUz6zL8x51y1BC7ZO1SR61WkVmHOQKt2lxHcJujYEe1S7VfrjIrwHo7Hvp3VzM8gjjr3prRgCtNkVkJXrVN4TtNOwLUzljy3Tiorm2JVscAcmrgIFKzrjOMk8VorJBYy9M0M3erWytwobcx9PT9a9Y1SEpYIjgh3Ubx6VzPhyK30+3m1nV5ltLQEL5zruC88cfXius1Rlv7UXVorzIV+Z1bAC+uK+tyzDyhSc2fHZtXjOqoxPkL45aL5Gu298iYS4Bjlb09K8hRdkvzrgr8v5V9J/G3TTdeHmmjwTBMGVj12185Xcf70kMDnmsa75WXhXzQuO2tJHgHHPX0pVtpEwSu4f3s1FC5RhznBrUt7tQCJ41I7YrnVjrim0VjyAMcjvUykFACCuOc1ahktdxMilc9qmAtpXxGD+NPfYNnZmdlV68j1oYA4aPlT3qa6cRSbFXIqJcMcksE+lA7DtrEZAH50gba3IpRECcryPUnmgqc/eJ9qBjDGztgDBppjyelOCnkM2G7U4pjvQJaEMsZUYGce1QqXTgKu3vknNW2QMM56VEUO0gCncY4TPtCnDD13E4/CrNrfT2R8y1uHhlzkNGxQ/mKo7StHNIVky8rbRyaaxyae0ZYFs4x2oWLIHPUelSVZjUALDcQB6mn/cOQQ34UhTaeDmnZYLwB+VAWYvn7mA5pxQE5GRTE5YE8fhUrZbtmpLGbB1JzimleeOBS5B4PBpwcAYoAeu3CgjJp3mMrfIoxRGAxHHTvUjxPnKkcetAmRyMW+9TOAehxVgxkrl9o/Go8HLKSOO9BNmRs8WepVgKkjgWaMuJMYqhPuZuKSOZ7SRXA46EVQjVjhikQZlwV605biGNSI03N6kVXEucygDaf4cU6XKn5MMvrQBA8jvMPN3qccbTximuFDdBk9+9SvKyqQcFu30qFSW+8MNQBGQc89KcVyB86rjoMU5weFx+NMMYZSzdR7U7W2C9j3X9mrx1JoXiWTRLyQf2dqJAjXPCzdsD3719lxjhSc4BxjvnvmvzM0+/l0y6try1kMdzbuJYXH8Lg8fXvX6DfDrxbD4w8J2GsQOGaRFjuOc4kA+f+le1gqza5DxcdRXxnYMOuKjJUggfeHXPf6UrMY/vgDPTB61l6rqsOnxLNcktK3ywRJyxPpivRktTyY3aL1zdw2sbSzuEjxgJnBJrnNQmfU5FF4zwWbdF2Alqrut28xn1qDY5w0YU7gv19/auY8Uadqd7rEFwLu4ezRckRPs2Y749q6KVOFTSRM5yp6xOY1Xw1deC5JriFmvtImmaTzEXLQg9V29gKdb3aPEskQWSGQbkZH3ZU9Cff2rpfCPiOWfU5tPlSS6gAYJPNHjcD13DvXJ+M9CXwjqtvc6WvlafdyiMxKPlic/418rmuV+w96C0PrMpzaVX3aiLaTA58pwV7jvTHkXucVmmfd80bKMkgHuw9cUvmHHzDJ9K+T5k2fWNOT0QTRkElTRZ28t5dQxQxtI27gKf50jybVYvnHbH9a6TSLd9Eto7wEf2jfHyrOPP3vRvYA969PCYWWIqJW0PMxuJjh6Td9STUtMn1lYtJsnC6dpzg3R7Suece+DTYbybT71dgJO4I8fbH0ro9PgNjYpaMwBDlpWA5Mp5bPt1rFhj+06pPIOMNz3zX6HTgowUFsfns5OcnN7nJfGbQlPhLUb6yCmF4yzAjhHHQD2618c3AUyABcO43EentX6I614fTX/AA/fadMuYbi2lTb6NjIb8xXwJrGmTacUS7AFxt3ODxgkn/CvCxtHlZ6+BqXjyvcw7O2a5nMXRicKM9TXongz4et4ignudQLraW3VLcAyE15whZWLbgT6V1vg3xne+ENUF7pwXDDEkR4VhXi1Yvk93c9yi4xlaR0mq+AYP7NN9pV1dQ7H2eVcW4Ab8Rk1xm/yZ3icBXjO1gCT+PNetW/xq023NzPHo7QXtwMyr5m5S3qD2rynWdS/te+lvGg8iSZ8tk5JH1rloe2T99HViFResGUb0neGUkJ/epRuYY3MB6Zp9zGPIHOR1xUcZaRQQME9q77nCPjRVbMhz6GnvIz/ACt8o7YpiLnh1JINSqdy5kxx0waVwIXU9RyfWmgF+anPP3eKjbAPBouA04Ax0pVXI4Y1KEVkJpFj9KYDPLpkiIhByT6ip9nON3NKyhVIIyfWgC1LHtdxg4NNC4X3rXuLYs2RiqIjdc/KCM1JoVVQk5INSbc8Ac1Z8sFcrnfTvJj3DeSD7UAUfIdj2GKQq/HOcener/kje2FJGOtRxwkDIGPrUgUiCWGVORSY+b7pqaQPubgEUg24+6c/WgB/mbUHy4x1NOCmRSSw46c1C4yhGcZNPVcHbnoKALMUaOmHAz9ailjjGcZzT4hg9amKpjcepoAxpk52p8uPWkJ42MM+9XriEc461SUHftJx9aohhBK0T7GYMh71ai2geW5OT0zUJRQPlYZpfmljG0YlWgRI6gHG0jHc0wyBBgjJPQ1KFVgGdvmA5FRysX5CgAUAN84bgTQ0m7IVCQfSmF1H3hT/AJAMgnmqAYm7eAFxj5ufavov9l/xuNP1W88N37KLe8Hm2wJ4WQdfzr53RdzMM4DKRk1o+Htbm8Ma1YavasfOsZFcr/eA7VrQm6dS5hiIKpTsfojq2qf2bbyzKrT3IGBGoyVHriub0LUBNeNfXfz354y/8A9AO49qt+ENai8S6HZakCkwvIx5jD+E+lV9a0WSzn+0WgIBOSB2r6enOM1c+WnGVOVjpftwEbB4tynkqefy9PpSQWtncIRC+0tyVJ6Vz9lqe8hJcg471blDRtvt2561bvDVArPc1v7FGS9osYYei4rl/GHh6bXdMks5Y2jkYEpIF+646H+dbUGruMZOJfStBNblBCXESuPWpqQddWkFKp7KV4nibeEtVsrcu9sZo0j4ZRlwe/HpWXC4dVZiAyn5lPUV9EK9ndECVMKeqg4zXJ6n4P0f+1xdm3KdzGOhr5+vk0Zv3T6LD57UoxtJHEeH9ISSQ3t4hkdP9VbY4k/3vQV0cNoYJHuZo0kvbgbQhPy2qeiVou8VuDDYQjn+MjpUEVrhi8jksOTmvZweCp4al5nj4zFTxVTnvoMdfKjPzYfG0g/xf/XrO0JN63EvUmUr+IPI/CpfEV61tZMIMNLKvlp6hm4B/AnNWtItDZWVrC3+st4wJT/ffHzH8TXZzWOM6K3dY4y+fudR9eP618h/tD+D00XV4r21AK3Us0bKP4NmMfnmvq9Z2jQ+YPkdR/OvFPj9po1nSbi8hU7baZpD/wAC/wD1VwYyPNG514SfLVR8eo4VsMgzmraMDtqndfurhs/wn+dSQvuHFfNvc+j5tTQLZZBjI7c0+SMqwO3LHuGzVaPPB9KsJKR82cHtSNEx87EQ/MCMDvUdrIVVGUhj3A7VYLefaN8wLZqrbYVnCigC8w/jUO2eoUZFJgkhlj2juxoQtwBGxB64NThVDBdpRcck9M0ARssZGWcZ9jTFCkE4qUxqDkuMVCyEZ2nigAVwDjOBTzwODUOCG2jBB5NShGbDZG1etAAWXHbd60MQVGWBNIyikCgcmqA7FordwzAxAbARtzVG4hSHcq45ORmp9CnmuLN0nREmVcdBU13uuH3Tp8wGBn0qGaGcuEA3bSPSnoEDBnjU02SMCQDaB9asRhVTLqCB2xSAhaEZLMWTPQCopItuBswD0JNXwNoymSDzg9qjmj82Ji3ODjJ7UAY80BjJ4Ug+hqHy1H8P61syWsccQzgkjiqTwg9MUAUnAUAt0oVgSWB3HGDmpCm4nkcetQmVkJUIpFAFiJg+cEDFTqUCgyDd6VWhYgg+WPwq0GYn51wO1ADWTJJxk+tVJIgGLA81oKski5GCKiNs27LYFAGdhs8Lt96QTmKcSfNg8Nx1q3PmMfvBke1UmDfNknB6U0BOwVJt6qQjDODUixAZLYw3TNR2/wC9Xy5D8w6E+lPEgJKMM7f1piZXlRSD92lUqQo44FPzEVbgAjsagkKBAygjFCILDxkpycgHIpSdy/MAx/nUaSBox82M+tSDaVwHG7tVdQR9KfsweMBLbX/hW9Y74/8ASLXJ6g9VH0r6VTNxGY5OVxjJr8+PAnig+EPF+m6qku2K3kCkDqVbhhX6DWM9vqFtBd2kgeK4jEisOnIzXt4aonGx4WJp2lcwtS0ExESQNnnoO1UI3lhbbKScV2mBIinjDdqzb3Tkk5QDNdvMzz3EwQ8bjO3DetEfmEERN8oOevWrUlgM4qnPAYgrxkrtP4VakzJoUagyt+8QxY/WpjdPcjAbd9amRY76AM6ZI4OKrPp4QkruA9q2T0I12M8a3aG+exmfyZ1+6p6NU1xd7Izg5LDbj0NY3ivRRc2jXAjPn2/KunU02+vBb6JZ3AyX+z7iO7NnFYc7dSx0KCULkNuTrHiFYlXNvZp5rN2LdNn9a7AJtUbuorH8KWH2XSleQDzbh/Pf13YwPwx+ta1yxQADvRzakFW4ZpEZV4OTisDxZ4dOseEtUszzJNAQnswHBrprWFpTk9M1bvYQlvJgcqpwPU0p2lBlQ92aZ+aGtwFLy5jK4ZW2n/gJqvZOFfBHy4rtPijpf9k+LNWgjTaBcnGPQ1wsbMvQ9DXzE1aTPqItOKNeNsE7qerDeBjK+lRo6yHjgj1qxHhclWXOOc1BstiW2bKvtO38KitmUSkEdetT2jcPuUN9KrAAXCsDgN2pAXGLA71Y56baeoJ/5ZKf95qPK3LuRhSBN5B5YjtQA75WO3YXb0FMbgEAYqcffBzsA/u9ajm6HCmgCqeDzzmpYiq8AYz15pgGWIcYNOVcnjtQBIUI6856UwKQTz93g1IoY/e59Ka529D9aEBqpOtnrrRkuFn4HpXQugZ/L5+UdTWT4hCxxLcGJg8J4rRsbhbu1jlRvvoC2fWhotO5FLCC3mAgbKmUCRQwZcCnSKoChxxUcMarG4UYzUjEkOP9X070jIske0gkE84qfy2wVAz8tRQhsrk7SvFAEM0LKwR4vkxgHPSs54lEDMEPXHWt25UAqwbOfvCqLxExFYx3zQBhzQiPkK3NQNGrYIUjn1rWusxl8rlmPJqgU77QCPWgB0Kqo+7z9alBLD5Tn61ChCkthd1SRLlDnblqAHjcFAOQfQGphFlMnPWo1y4ULtDjvVjEwIUkZ9qAKt0pC/vOVqhKpArRkDGYKeVqu6Akhl2mgDN+cZYZBAqyY3aCKaH7460MPmIU5A4pLS5aGXynGUfg07iY/l4y/G4e1UnnLkqTjn0q4qNHcyIzbYsZWoJc/wAa7h2NNaECI4AwzfTiponUuvzd/Soh82N3ygdBUsZEmdhwVqgCVVlgUKRuK5HHpX2Z+zl41TXfBMNlcvuutOfyWBPOPX6V8ZkknBr0r4D+I20Dx9DbSuUttRQxOc8Z/g/WurDz5JnJiYc8D7uXDouAAOcHNMdQnXkGsPT7wx/JMG4+UZ9K2ldZRhD8uK9npc8BPmlZlOWIZOBWXdoq7gw+U1tt93FY2pgxrVJk2uivp6mKYxD7hBNaTx57Vm2hZiGXritCCQ5wcVvDcxexFLZK6tFJymwq2feuF1KyWXUtP0qIk+UN7j2BzXfS3KDzVuDhQev+z3rl9Aia7vtR1WRc3EjmONv+mY4FaSS6CTto2bVvGqoSBgD5FA/Oqs53SgVeZBEAA3RcketUo18xx9a5WrO5a1NSyiCxg4pmrMIoXbvjFX4E2xCsbxO+y164BOKaXusNvePiv4+adJB4tnnI+WeIScV42BhCe+a+nv2gPD5fSNN1NSVDl0kP0+7XzIYdu4fe5r5+vHlmfSYeXNBFu1lPORkVbDI+BjFU7ddhAIx7VeVMjKYz71zs7FsWbKZUlKAcYqKR1+1IoPA9qkt0f7Qv3elMZm+1JmkBZV8Fh1p8SlgdpwaezNkhAvPUmkCBsMpX5OoFADHVQfvHdTGyeC1TBTuPP3qa+PkJHfFAFV8rznJp6nBX3p80YJLLTSpYDb1pMCUY4+ao2AQknkE0+NecPzTJ8jIH3R0oTA7TUIReQXMaMSAOM1gaDe+R5lvKCrqx25rTuZmeItbXK+V3K9fyrlZrgxX0TmQEk4JPHFUylod6JEeFC2CR1qEKWUEkcnoBUMKb4yyMCCBjmpVTG0oc4POagofGwV8uGJ6YzUbsglby8rg9G5pzrskWVnG7qBmnyRLuMrFTu560AV58gsFbjHNRKuZtoY7cVYYE722gqRxzUCu2NyoDQBFNF8oL5NUGjBYsxwF55FbWSyjeSoYcDHSqFymxsNuZT6LQBngQs5Kjg8dKXYByE+70qy2VX7oC9uOaiZWVGDE5IzxQAqAlSQAMcjirMYLr8zhGx1xUECN5e5lbb64qywCMjqCAVx8woAhKJE6guXz14qvIvzGTPHvV55ixBU7dvXK1WY7xtZcLQBSwTkgBsnoOKr3MMhjZgvlke/NWp4duNuVz0INQPuETqMuwxyaAGgfaIN0QLPH1yaZubZvYYB/Q0trut53XcVjk6UrKUkMMpOM5XjrVEWZAuVYMSGYdRip0k3EsqhT9KkMYI3DYGH3uabtLkA7VHrmmhCMDIwKY96kiuZbS8huLJzDcW0iyQk87mB/l7VCilGO0/KT17UrqsbIWYOUOeO1NNppiaTTTP0A8Fa1H418JaZrduRvurcGRR/Ay/KR+YJrbhlkthtfsa+ev2UvG+z+0fCmoPgO/2q0J9TwV+mOa+nZ4Ygw3DhuAcda92lLnjofOVoOE3YrRzpKMjrWdrSkwAjrmtX7KkIBTv0qjqKGSI+1bowWxT0+APB1IPsaj+zSNK6xOd3bNW9NwIDnIwaq3kzWd5HKP9X3q1Np2Rml3MTxZqJ07SLqW7Qjy0EbFf4t3HHvVLwF4htNSiW0SOWCUJgCT+IfWrPjuxl1iCCytn2lsy898crn8awtE8O+II9dtJ794ILSDGViYEsMV6MFFxu2cFRzU9Foeg3qiKFt2EOMKvU/nVHT13sCemavXoDQSELhiSfXioNFXzImI7GuCafMdsfhNpBhPxrnPEa/aZ7W1H3nkz+VdOg+Vc1hvCLrX4lzwoJqW+g1rE8s+PGiCX4aXJyoa2mjcYHbPNfD85/euF4Ga/Q/4xaf9p+HWsxbAWWAvnP8Adr8+L+Hy52XvkV4+MVpKx7mBbcLDEXcAauRoQvALVUtycCrsLMS20gYFcB6hYtk/0hc8cVHO4N6gXpUkMzC4TKBgeKjuQPtqnG0A44qQLmwyELjGDmnFVTICZJ644pU+UlCSQOc4p7bSvG7nuRigCAKMgYK46fNUrDcmMcCmALnkBv8AgVTKVK56UAVyGKkYyKjG9T93Aq22FGcZH1qBuegAz70mwGhiDkdaWb54ySRn0ApVwOtOfAA4x70kBoWGIpPLdBFIf4DVPxbp8axpMqbHVQeKtiKWeVCwbI745pdWRZLR43JLe9Wi3sO0G9+0WEeByBjNbMedwHrXF+HZvK8y35DA8V00E7yOx7gcVLHE0XC/xFeKWIrJlTg46YpqKrwfNjd1pqlvLKLgYP50gJASG2hCR7VnYAZiCynPSrrLuVmI4A5waoNs342HH1oAtod8oG7n0NE4PmgNll74quTsGFj2/wC1mplkd4tgfJHOMUAQXcCKQyFsNxVWSN0EmGztWrpWWTCkjg0SRL0lcFvagCIF/LhjyeQCcVI5DyqFJbbxinrGEi+dsp/CvenQAbWLcH070ARTK7qw8vA9aq5LcAVomNHgLxSYf0Jqs6u64GCPYUAVJYCyknsM1XACrk96vMwA2+WTxzzUXlJKudu3BHOaAMyQFohgfNnilmAlt0m+bzUO3npxVmeEeVIe4bimRR+W+OCGHc0AV3j3FRLgbxk7aQHHybTtHQipxG5Z4ZGVATkH1oKNvyPvDgUIh7kfWAgSuDn7uymxqQfnjP1IpWL78SR5HsamjKZdSpwOxNW9hq19Td8C+J5PB/jDSdZiKrFbTr5+7p5THDfkM1+gj3tvqNnb31nKJrVoxNBt7o3T9DX5sOsTHZKp8pshj/T8a+yf2dfFX/CSfDv7DcSBr3SJjFIuefLIyp+g4Fehg6ljyMdTa1R7QkgmjQj0qtPFuVh6mm2Eu35KtsnXPbmvTPIKEcIgjIx1rK1lhhK2yvmNk9q5zX22ygCriSyrqMgXXkO/KG3G0V0Nku6Nd4Bz3rmb9d09m/8As9a39OfIHNdS2MWWbm3JBCjKEcms7Sv9GvmhPTNbsuCpHaslI1F5ms3IpG0QMnHTPFYELlfEAI9K6AfdFc3H/wAh41gUi345sP7S8K6naY5ntpFH4ivzY1m1aK7KfxBnB/Cv0/1RPMs2H+yR+lfmx42s/sWuX1u2QUuXH/jxP9a8/FK9j2MFKyZzULqhGVyKtrjBbGARVNCd2B0zVtAcc9K8pPoew9S1bP8AvkAFRXUTJc4Lc76lt/vp9R/Okvof+JgTG3y+Z3pgTBDucSFsdRirKybdpIOQMDPpTBbguRuJxz1pzYZTvGQOKlgR7d75j2k0K5LbXZQfSlyAE2LSKoJywoAkkO5CGI44GKhIAwQakd0KkColICnH3u1QwG7uaWQjAx1pQiuhx96oZFCpyee9WB3iSl2woUMB6VzGss/m4AL45P8AhTv7Tkt02S/I3qaQajHK4BZTkfrVI0MO2m8vUUYIQzZyK6C2uMSkkY46Vj3ytDMJQAgzw1WYLkmVW4dSOoqGB0QlD4JJUY6CpfMRvmChioxyaqRSKy54xUn3du3o3IpATRgtGwxjPvUBQZO8AfjUok2K3rjpUUpVwDjjvzQBHvAO7HCn1qxFcBpgNmUxxiqxKmPanKk9akiYCRQnGB+dAF8fvCSiY+tV5IlTJKncOmaI28xyrh0bPHvUswKTKQceu7mgCMbcDcnzH+KkKpHnkkkdT/KrDOWyXK59hUXmLtw67iTwAKAIEkEYJMQYe1RzFvMBQhA3TFXCrxplY857GocH5C4UBOh9aAISrgEkI3OCSelQPEEVwpbBwc1YuP3ilgOrZOKashAYDDA9sUAUpJFc/Ngc5qFhHKjmNTvU5q9JEwb5ogCelVpU8uQlWC8cigCo/lzwCTlZEPzAUrSGUqyLg9Ao706NQj7JMbZT1pwCpI0bDAA4oFYhKF+iuGHX5hSoDzw2B3PWlHkkt5hEZHTJPNNUAtiPOG6gdBVJ9xNC7xIuwKSpPzZ/nXpHwH8Wnwt8QoYnYxWepx/ZpVJ4Jzw31zXnYtH5MaNsIPzZ71AZZLW4juId6z2214yD1YHOP0renLlehjUjzqzP0ksMlm4+dDhvT8K0ZgGHHFcb8LvEY8V+D9J1XI854P3uD1cdQfxrrmfPHfuPSvcTUtj5qUXGdmQtxyK5bWiHulB71087BYzk81yOoSebfoqnJ9K0huZsW9iKwQOeq8VoaY/C0moIPsSAjBFR6eQuOa6mYs6LOVFVDCBMGIqdGJUbeaeyqcFuKyki4olBAjz6VzUD7tbyR1NdDI3yHac8VzMLgaupz3rNgjsbld1sQOTivzz+MdibPx3ri7eFuiR+IFfoap3wEd8V8MftC2y2vxE1RcffcP8AgQOa4MV8Fz08HrUseJRglvQVZjzk4OeKbgr95dvNSqq4XB5NeN2Z7vWxas0Z3XIHBFP1MqLr5wEPmfwUkG+N1A7kU2/TbdhMZbzO9O4FtwN2UJC0pOTwOMVHLw/LcdBx3qWKZoz90Be5NSAzY8hAVguPWmxjYcHLc96sO4I3LtP0qu/HKvQgFlAyOMZFQHg46e9SYkf5jyB3phG40WAYX2KQeCehqvJnHJ7U+dsn5uCOlU7mX9224EEDmmhPQ7a600XJYPEMgdq5mXTxFK3lBklB4z0rpodUuFwZ4OB1IrNu721uGkKEo3oady7mVM00qFZiC4Bwap2dwRGRJyQeMVcuQdgMTA+oHesq1mzdvGRtxSeoXOotbj90F8vORWisy+WpZSu3iubhlboGPFa9q/y/P8wPrUlFk3WTwpOacp+UsFB9qqHcS/zEL2FKFxjaxFAFuN8qCcKfT0pyvvbBwD2qoCAXBYZHqKSN2D5DKceooA1EfHGMnvUifId+NueneqsLO1z1XBHIxUsh5AU4A7UAWQxJ/enc3rVlFTGRkH2qr56seVywHU0LKx4KrgGgC2bZhyEaT2L1UMTQkkgKv1qVGyrAopJ6UyWMxs6oN6gc5oAhDGRGO7ODgZpYyyKTgDHenxojRbpAc+1N2o4Kozj8aB2Kck7Eky7jjpgVVn8yTBCDB71obWAJBLA9M1FJEhUeYSDmgRnT2rMituVHXkDPWkkKPGkoJEkZ5NXJIo/ND7chFIqrFEqzbdx+dThe2aAIS5k5wH+tJGIxL84CsR0EhGKnjjVFkSVCWHSol2s6lEICj1oJUgQoWdXJ2jkYYnmmSANnahGBxmrCKdjPtJycDJqJt+BkHr/fq0J6n0V+yl4vFudW8LXkpYSYvLbJ+6BwyD8TmvpxN7fNJgu3JIr8+/hx4hHhLx1pWrb9kSTiKTP8W445/Ovv9rlNiiJlYEAhlGOK9rCzvHU8LGx5KlyK7bCmuUlGdTj+tdg8XmR88nrXK20fm61Kjc7UUj2Oa7YvU85mveJvtM4qhaHoPStq4TbaEGsmAAP0rovcxZtW/wB0VZ8vcKrwcJxVpScVEi0V5flQ1y68amPUmunujhGJrkZmKXayA4wayeo0rHcW5+QhvSvjf9p6HHxAKldoksI5c+vzEV9g2VwJ0UgA8V8q/tVWjL4n0q5cD97YKmfYMTiuHFL92ehg3+9Pm58sxAxtoj2pIODz6094SJCR8oB4x3qRNpIZh82cba8ZrRHvfaJ40InUr82SP50uqKftyYO5t/OKWFSs4YHAyKLwYvIyvDb+tFhkzDduUHbtOcUztkbmJ7VZuNqsWzhjwfeozIVAH3R6ioYECspUhgRSO+5OBT2OenNQ+YD8gGKaARZfl2spz60HCqSDj2pQ5TAAzzzSTAs5wozTArSDe4rO1FsCRB94jFaEh2sN3FUXjN1exhRkGULQtBPU/9k=" alt="Portrait of Mahmoud Elkholy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-bio reveal">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Background</h2>
+      <p class="about-para">Mahmoud Elkholy is a Postdoctoral Researcher at King Fahd University of Petroleum &amp; Minerals (KFUPM). His research focuses on renewable energy systems, microgrids, AI-driven energy management, and intelligent control of future power networks. He has collaborated internationally with researchers from Saudi Arabia, Japan, Egypt, and China.</p>
+      <p class="about-para">He completed his Ph.D. in Integrated Intelligence Engineering at the University of the Ryukyus with an Outstanding grade (CGPA 4.0/4.0), earning the university&rsquo;s President&rsquo;s Honorary Award &mdash; its highest recognition for a graduate student. He is Co-Principal Investigator on two internationally funded research programs and serves as a reviewer for IEEE Access, Energy Conversion and Management, and other leading journals in the field.</p>
+    </div>
+    <div class="impact-strip reveal">
+      <p class="impact-strip-title">Research Impact &middot; Google Scholar</p>
+      <div class="impact-grid"><div class="impact-item reveal"><div class="impact-num">52</div><div class="impact-label">Publications</div></div>
+<div class="impact-item reveal"><div class="impact-num">2,373</div><div class="impact-label">Citations</div></div>
+<div class="impact-item reveal"><div class="impact-num">32</div><div class="impact-label">h-index</div></div>
+<div class="impact-item reveal"><div class="impact-num">44</div><div class="impact-label">i10-index</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="interests" class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Focus Areas</p>
+      <h2 class="section-title">Research Interests</h2>
+      <p class="section-intro">Core themes spanning renewable energy systems, intelligent grid control, and next-generation electric mobility.</p>
+    </div>
+    <div class="research-interests-grid"><div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-solar-panel"></i></div><div class="interest-label">Renewable Energy Systems</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-diagram-project"></i></div><div class="interest-label">Hybrid Renewable Energy Integration</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-network-wired"></i></div><div class="interest-label">Microgrids</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-bolt"></i></div><div class="interest-label">Smart Grid Technologies</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-brain"></i></div><div class="interest-label">AI Applications in Power Systems</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-gauge-high"></i></div><div class="interest-label">Energy Management Systems</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-charging-station"></i></div><div class="interest-label">Electric Vehicle Charging Infrastructure (EV/V2X)</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-microchip"></i></div><div class="interest-label">Real-Time Digital Simulation</div></div>
+<div class="interest-card reveal"><div class="interest-icon"><i class="fa-solid fa-chart-line"></i></div><div class="interest-label">Multi-Objective Optimization</div></div></div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Career Path</p>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <p class="section-intro">A research career spanning Egypt, Japan, and Saudi Arabia &mdash; from demonstrator to postdoctoral researcher.</p>
+    </div>
+    <div class="current-positions"><div class="position-card reveal"><div class="position-icon"><i class="fa-solid fa-user-tie"></i></div><div class="position-kind">Current Position</div><div class="position-role">Postdoctoral Researcher</div><div class="position-org">King Fahd University of Petroleum &amp; Minerals (KFUPM), Saudi Arabia</div></div>
+<div class="position-card reveal"><div class="position-icon"><i class="fa-solid fa-earth-asia"></i></div><div class="position-kind">Visiting Position</div><div class="position-role">Visiting Researcher</div><div class="position-org">University of the Ryukyus, Japan</div></div>
+<div class="position-card reveal"><div class="position-icon"><i class="fa-solid fa-chalkboard-user"></i></div><div class="position-kind">Academic Position</div><div class="position-role">Assistant Professor</div><div class="position-org">Zagazig University, Egypt</div></div></div>
+    <div class="twin-columns">
+      <div>
+        <h3 class="timeline-block-title"><i class="fa-solid fa-briefcase" style="color:var(--gold)"></i> Experience</h3>
+        <div class="timeline"><div class="timeline-item reveal"><div class="timeline-date">Sep 2025 &ndash; Present</div><div class="timeline-role">Postdoctoral Researcher</div><div class="timeline-org">IRC for Smart Mobility and Logistics, King Fahd University of Petroleum &amp; Minerals (KFUPM)</div><div class="timeline-loc">Dhahran, Saudi Arabia</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Apr 2025 &ndash; Present</div><div class="timeline-role">Visiting Researcher &amp; Assistant Professor</div><div class="timeline-org">University of the Ryukyus (Visiting Researcher) &amp; Zagazig University (Assistant Professor)</div><div class="timeline-loc">Japan &amp; Egypt</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Oct 2022 &ndash; Mar 2025</div><div class="timeline-role">Ph.D. Student</div><div class="timeline-org">Interdisciplinary Intelligent Systems Engineering Dept., University of the Ryukyus</div><div class="timeline-loc">Okinawa, Japan</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Jul 2019 &ndash; Oct 2022</div><div class="timeline-role">Teaching Assistant</div><div class="timeline-org">Electrical Power and Machines Engineering Dept., Zagazig University</div><div class="timeline-loc">Zagazig, Egypt</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Oct 2016 &ndash; Jul 2019</div><div class="timeline-role">Demonstrator</div><div class="timeline-org">Electrical Power and Machines Engineering Dept., Zagazig University</div><div class="timeline-loc">Zagazig, Egypt</div></div></div>
+      </div>
+      <div>
+        <h3 class="timeline-block-title"><i class="fa-solid fa-graduation-cap" style="color:var(--gold)"></i> Education</h3>
+        <div class="timeline"><div class="timeline-item reveal"><div class="timeline-date">Oct 2022 &ndash; Mar 2025</div><div class="timeline-role">Ph.D. in Integrated Intelligence Engineering</div><div class="timeline-org">University of the Ryukyus, Japan</div><div class="timeline-detail">Thesis: &ldquo;Optimal Operation and Management of Hybrid Renewable Energy Systems&rdquo;</div><div class="timeline-grade">Outstanding &middot; CGPA 4.0 / 4.0</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Oct 2016 &ndash; Jul 2019</div><div class="timeline-role">M.Sc. in Electrical Power and Machines Engineering</div><div class="timeline-org">Zagazig University, Egypt</div><div class="timeline-detail">Thesis: &ldquo;Operating Reserve Determination in Renewable Power Integration Studies&rdquo;</div><div class="timeline-grade">Preliminary Courses 3.3 / 4 GPA</div></div>
+<div class="timeline-item reveal"><div class="timeline-date">Sep 2011 &ndash; Jul 2016</div><div class="timeline-role">B.Sc. in Electrical Power and Machines Engineering</div><div class="timeline-org">Zagazig University, Egypt</div><div class="timeline-detail">Graduation Project: &ldquo;Electrical Installation for Tourist Village&rdquo; &mdash; Grade: Excellent</div><div class="timeline-grade">Excellent with Honors &middot; 90.01%</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow">Research Output</p>
+        <h2 class="section-title">Publications (52)</h2>
+        <p class="section-intro">A curated selection below, drawn from 52 peer-reviewed journal and conference papers on microgrids, hybrid renewable systems, and AI-driven energy management. The list below (from his CV) currently details 43 published entries plus 10 under review &mdash; see Google Scholar for the complete, continuously updated record.</p>
+      </div>
+      <a class="scholar-link" href="https://scholar.google.com/citations?user=Y2ATJeoAAAAJ&amp;hl=ar" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> View on Google Scholar</a>
+    </div>
+    <ul class="pub-list" style="margin-top:44px"><li class="pub-item reveal"><span class="pub-index">[1]</span><div class="pub-content"><h3 class="pub-title">Intelligent Dispatch-Based Optimization of Hybrid Renewable Architectures Incorporating Electric Mobility and Hydrogen Storage for Commercial Energy Systems</h3><p class="pub-authors">M.H. Elkholy, et al.</p><div class="pub-footer"><span class="pub-venue">IEEE Access &middot; 2026</span><a class="pub-link" href="https://doi.org/10.1109/ACCESS.2026.3661790" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[2]</span><div class="pub-content"><h3 class="pub-title">Design and Implementation of a Real-time Energy Management System for an Isolated Microgrid: Experimental Validation</h3><p class="pub-authors">M.H. Elkholy, M. Elymany, H. Metwally, M.A. Farahat, T. Senjyu, M.E. Lotfy</p><div class="pub-footer"><span class="pub-venue">Applied Energy, vol. 327, p. 120105 &middot; 2022</span><a class="pub-link" href="https://doi.org/10.1016/j.apenergy.2022.120105" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[3]</span><div class="pub-content"><h3 class="pub-title">Implementation of a Multistage Predictive Energy Management Strategy Considering Electric Vehicles Using a Novel Hybrid Optimization Technique</h3><p class="pub-authors">M.H. Elkholy, T. Senjyu, M.M. Gamil, M.E. Lotfy, D. Song, et al.</p><div class="pub-footer"><span class="pub-venue">Journal of Cleaner Production, vol. 476, p. 143765 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.jclepro.2024.143765" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[4]</span><div class="pub-content"><h3 class="pub-title">Optimal Resilient Operation and Sustainable Power Management within an Autonomous Residential Microgrid Using African Vultures Optimization Algorithm</h3><p class="pub-authors">M.H. Elkholy, T. Senjyu, M. Elymany, M.M. Gamil, M. Talaat, et al.</p><div class="pub-footer"><span class="pub-venue">Renewable Energy, vol. 224, p. 120247 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.renene.2024.120247" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[5]</span><div class="pub-content"><h3 class="pub-title">Techno-economic Configuration of a Hybrid Backup System within a Microgrid Considering Vehicle-to-Grid Technology: A Case Study of a Remote Area</h3><p class="pub-authors">M.H. Elkholy, T. Said, M. Elymany, T. Senjyu, M.M. Gamil, et al.</p><div class="pub-footer"><span class="pub-venue">Energy Conversion and Management, vol. 301, p. 118032 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.enconman.2023.118032" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[6]</span><div class="pub-content"><h3 class="pub-title">A Flexible Multi-agent System for Managing Demand and Variability in Hybrid Energy Systems for Rural Communities</h3><p class="pub-authors">E.S. Ali, M.H. Elkholy, T. Senjyu, et al.</p><div class="pub-footer"><span class="pub-venue">Scientific Reports 15, 16255 &middot; 2025</span><a class="pub-link" href="https://doi.org/10.1038/s41598-025-01288-5" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
+<li class="pub-item reveal"><span class="pub-index">[7]</span><div class="pub-content"><h3 class="pub-title">Experimental Investigation of AI-Enhanced FPGA-Based Optimal Management and Control of an Isolated Microgrid</h3><p class="pub-authors">M.H. Elkholy, A. Yona, S. Ueda, T. Said, T. Senjyu, M.E. Lotfy</p><div class="pub-footer"><span class="pub-venue">IEEE Transactions on Transportation Electrification, vol. 10, no. 2, pp. 3670-3679 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1109/TTE.2023.3315729" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li></ul>
+    <div class="pub-toggle-wrap">
+      <button class="pub-toggle-btn" id="pubToggleBtn"><span>View All Publications</span> <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <div class="pub-full" id="pubFull"><div class="pub-full-inner">
+      <h3 class="pub-full-heading">Published &amp; In Press (43)</h3>
+      <ol class="pub-full-list"><li class="pub-full-item reveal"><span>D. Song, A. Yousaf, J. Noor, et al. <b>&ldquo;ANN-Based Model Predictive Control for Hybrid Energy Storage Systems in DC Microgrid.&rdquo;</b> Protection and Control of Modern Power Systems, vol. 10, no. 4, pp. 1-15 (2025).</span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, A.S. Amin, A.M. Ilham, M.H. Elkholy, et al. <b>&ldquo;Power Capacity Enhancement of Hydropower Plant through the Penetration of Solar and Wind Energy.&rdquo;</b> International Journal of Electrical Power &amp; Energy Systems, vol. 169, p. 110787 (2025). &mdash; <a href="https://doi.org/10.1016/j.ijepes.2025.110787" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>S. Ahmed, M.H. Elkholy, M. Talaat, T. Senjyu, et al. <b>&ldquo;Dynamic Hybrid Energy Management for Self-sufficient Residential Microgrids: A Flexibility-constrained Approach with Integration of Hybrid Backup Storage Systems.&rdquo;</b> Journal of Energy Storage, vol. 138, p. 118745 (2025).</span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, A. Yona, S. Ueda, T. Said, T. Senjyu, M.E. Lotfy. <b>&ldquo;Experimental Investigation of AI-Enhanced FPGA-Based Optimal Management and Control of an Isolated Microgrid.&rdquo;</b> IEEE Transactions on Transportation Electrification, vol. 10, no. 2, pp. 3670-3679 (2024). &mdash; <a href="https://doi.org/10.1109/TTE.2023.3315729" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>I.T. Halidou, M.H. Elkholy, T. Senjyu, T. Said, M.M. Gamil. <b>&ldquo;Optimal Microgrid Planning for Electricity Security in Niamey: A Strategic Response to Sudden Supply Disruptions from Neighboring Sources.&rdquo;</b> Energy Conversion and Management, vol. 326, p. 119529 (2025). &mdash; <a href="https://doi.org/10.1016/j.enconman.2025.119529" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>S. Ahmed, Y. Huang, M. Kinjo, T. Senjyu, D. Song, M.H. Elkholy. <b>&ldquo;Sustainable and Reliable Energy Management for Urban Hybrid Energy Systems &mdash; A Case Study in Islamabad Pakistan on Hydrogen and Battery Integration Using Transient Search Optimization Algorithm.&rdquo;</b> Results in Engineering, p. 106272 (2025).</span></li>
+<li class="pub-full-item reveal"><span>E.S. Ali, M.H. Elkholy, T. Senjyu, et al. <b>&ldquo;A Flexible Multi-agent System for Managing Demand and Variability in Hybrid Energy Systems for Rural Communities.&rdquo;</b> Scientific Reports 15, 16255 (2025). &mdash; <a href="https://doi.org/10.1038/s41598-025-01288-5" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, T. Senjyu, M.M. Gamil, M.E. Lotfy, D. Song, et al. <b>&ldquo;Implementation of a Multistage Predictive Energy Management Strategy Considering Electric Vehicles Using a Novel Hybrid Optimization Technique.&rdquo;</b> Journal of Cleaner Production, vol. 476, p. 143765 (2024). &mdash; <a href="https://doi.org/10.1016/j.jclepro.2024.143765" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, T. Senjyu, M. Elymany, M.M. Gamil, M. Talaat, et al. <b>&ldquo;Optimal Resilient Operation and Sustainable Power Management within an Autonomous Residential Microgrid Using African Vultures Optimization Algorithm.&rdquo;</b> Renewable Energy, vol. 224, p. 120247 (2024). &mdash; <a href="https://doi.org/10.1016/j.renene.2024.120247" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>S.M.A. Elazim, M.H. Elkholy, A. Elgarhy, et al. <b>&ldquo;Enhancing Stability and Power Quality in Electric Vehicle Charging Stations Powered by Hybrid Energy Sources through Harmonic Mitigation and Load Management.&rdquo;</b> Scientific Reports 15, 28077 (2025). &mdash; <a href="https://doi.org/10.1038/s41598-025-14143-4" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>D. Song, K. Chen, R. Chen, X. Fan, J. Yang, et al. <b>&ldquo;A Bi-level Optimization Approach for Siting and Sizing of Distributed Wind-storage Power Systems in Rural Areas Based on MCTS and IPSO Algorithms.&rdquo;</b> Energy Conversion and Management, vol. 342, p. 120173 (2025). &mdash; <a href="https://doi.org/10.1016/j.enconman.2025.120173" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, M. Elymany, S. Ueda, I.T. Halidou, H. Fedayi, T. Senjyu. <b>&ldquo;Maximizing Microgrid Resilience: A Two-stage AI-Enhanced System with an Integrated Backup System Using a Novel Hybrid Optimization Algorithm.&rdquo;</b> Journal of Cleaner Production, vol. 446, p. 141281 (2024). &mdash; <a href="https://doi.org/10.1016/j.jclepro.2024.141281" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, T. Said, M. Elymany, T. Senjyu, M.M. Gamil, et al. <b>&ldquo;Techno-economic Configuration of a Hybrid Backup System within a Microgrid Considering Vehicle-to-Grid Technology: A Case Study of a Remote Area.&rdquo;</b> Energy Conversion and Management, vol. 301, p. 118032 (2024). &mdash; <a href="https://doi.org/10.1016/j.enconman.2023.118032" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, T. Senjyu, H. Metwally, M.A. Farahat, A.S. Irshad, et al. <b>&ldquo;A Resilient and Intelligent Multi-objective Energy Management for a Hydrogen-battery Hybrid Energy Storage System Based on MFO Technique.&rdquo;</b> Renewable Energy, vol. 222, p. 119768 (2024). &mdash; <a href="https://doi.org/10.1016/j.renene.2023.119768" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, M. Elymany, A. Yona, T. Senjyu, H. Takahashi, M.E. Lotfy. <b>&ldquo;Experimental Validation of an AI-embedded FPGA-based Real-Time Smart Energy Management System Using Multi-Objective Reptile Search Algorithm and Gorilla Troops Optimizer.&rdquo;</b> Energy Conversion and Management, vol. 282, p. 116860 (2023). &mdash; <a href="https://doi.org/10.1016/j.enconman.2023.116860" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, M. Elymany, H. Metwally, M.A. Farahat, T. Senjyu, M.E. Lotfy. <b>&ldquo;Design and Implementation of a Real-time Energy Management System for an Isolated Microgrid: Experimental Validation.&rdquo;</b> Applied Energy, vol. 327, p. 120105 (2022). &mdash; <a href="https://doi.org/10.1016/j.apenergy.2022.120105" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, T. Senjyu, M.E. Lotfy, A. Elgarhy, N.S. Ali, T.S. Gaafar. <b>&ldquo;Design and Implementation of a Real-Time Smart Home Management System Considering Energy Saving.&rdquo;</b> Sustainability, vol. 14, no. 21 (2022). &mdash; <a href="https://doi.org/10.3390/su142113840" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, H. Metwally, M.A. Farahat, M. Nasser, T. Senjyu, M.E. Lotfy. <b>&ldquo;Dynamic Centralized Control and Intelligent Load Management System of a Remote Residential Building with V2H Technology.&rdquo;</b> Journal of Energy Storage, vol. 52, p. 104839 (2022). &mdash; <a href="https://doi.org/10.1016/j.est.2022.104839" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, H. Metwally, M.A. Farahat, T. Senjyu, M.E. Lotfy. <b>&ldquo;Smart Centralized Energy Management System for Autonomous Microgrid Using FPGA.&rdquo;</b> Applied Energy, vol. 317, p. 119164 (2022). &mdash; <a href="https://doi.org/10.1016/j.apenergy.2022.119164" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, M.H. Elkholy, N.F. Alshammari, G.A. Ludin, T. Senjyu, et al. <b>&ldquo;Novel Approach for Energy Balancing with Intermittent Renewable Energy Source Using Multi-Objective Genetic Algorithm.&rdquo;</b> IEEE Access (2024). &mdash; <a href="https://doi.org/10.1109/ACCESS.2024.3507216" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>L. Pai, T. Senjyu, M.H. Elkholy. <b>&ldquo;Integrated Home Energy Management with Hybrid Backup Storage and Vehicle-to-Home Systems for Enhanced Resilience, Efficiency, and Energy Independence in Green Buildings.&rdquo;</b> Applied Sciences, vol. 14, no. 17 (2024). &mdash; <a href="https://doi.org/10.3390/app14177747" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, N. Kargar, M.H. Elkholy, G.A. Ludin, S. Elias, et al. <b>&ldquo;Techno-economic Evaluation and Comparison of the Optimal PV/Wind and Grid Hybrid System with Horizontal and Vertical Axis Wind Turbines.&rdquo;</b> Energy Conversion and Management: X, vol. 23, p. 100638 (2024). &mdash; <a href="https://doi.org/10.1016/j.ecmx.2024.100638" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, M.N. Zakir, S.S. Rashad, M.E. Lotfy, A. Mikhaylov, M.H. Elkholy, et al. <b>&ldquo;Comparative Analyses and Optimizations of Hybrid Biomass and Solar Energy Systems Based upon a Variety of Biomass Technologies.&rdquo;</b> Energy Conversion and Management: X, vol. 23, p. 100640 (2024). &mdash; <a href="https://doi.org/10.1016/j.ecmx.2024.100640" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>S. Ahmed, Y. Huang, Q. Tayyab, T. Senjyu, M.H. Elkholy. <b>&ldquo;Identification of Power Grids Low-frequency Oscillations through a Combined MEEMD-Prony Method.&rdquo;</b> Energy Reports, vol. 11, pp. 4245-4253 (2024). &mdash; <a href="https://doi.org/10.1016/j.egyr.2024.04.015" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, A.R. Mohamed, B.E. Sedhom, A. Wahba, M.H. Elkholy, et al. <b>&ldquo;Monolithic Design of Self-adaptive CMOS Converter and Robust Event-triggered Consensus Control for Integration of Multi-renewable Energy Sources with Battery Storage System.&rdquo;</b> Journal of Energy Storage, vol. 88, p. 111498 (2024). &mdash; <a href="https://doi.org/10.1016/j.est.2024.111498" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, S. Ueda, M. Furukakoi, M.N. Zakir, G.A. Ludin, M.H. Elkholy, et al. <b>&ldquo;Novel Integration and Optimization of Reliable Photovoltaic and Biomass Integrated System for Rural Electrification.&rdquo;</b> Energy Reports, vol. 11, pp. 4924-4939 (2024). &mdash; <a href="https://doi.org/10.1016/j.egyr.2024.04.057" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>Q. Tayyab, N.A. Qani, M.H. Elkholy, S. Ahmed, A. Yona, T. Senjyu. <b>&ldquo;Techno-economic Configuration of an Optimized Resident Microgrid: A Case Study for Afghanistan.&rdquo;</b> Renewable Energy, vol. 224, p. 120097 (2024). &mdash; <a href="https://doi.org/10.1016/j.renene.2024.120097" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A.S. Irshad, G.A. Ludin, S. Ludin, M.H. Elkholy, S. Elias, T. Senjyu. <b>&ldquo;Integration and Performance Analysis of Optimal Large-scale Hybrid PV and Pump Hydro Storage System Based upon Floating PV for Practical Application.&rdquo;</b> Energy Conversion and Management: X, vol. 22, p. 100599 (2024). &mdash; <a href="https://doi.org/10.1016/j.ecmx.2024.100599" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>W. Meng, D. Song, L. Huang, X. Chen, J. Yang, et al. <b>&ldquo;Distributed Energy Management of Electric Vehicle Charging Stations Based on Hierarchical Pricing Mechanism and Aggregate Feasible Regions.&rdquo;</b> Energy, vol. 291, p. 130332 (2024). &mdash; <a href="https://doi.org/10.1016/j.energy.2024.130332" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>D. Song, X. Tan, X. Deng, J. Yang, M. Dong, M.H. Elkholy, et al. <b>&ldquo;Rotor Equivalent Wind Speed Prediction Based on Mechanism Analysis and Residual Correction Using Lidar Measurements.&rdquo;</b> Energy Conversion and Management, vol. 292, p. 117385 (2023). &mdash; <a href="https://doi.org/10.1016/j.enconman.2023.117385" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>D.A. Konneh, H.O. Howlader, M.H. Elkholy, T. Senjyu. <b>&ldquo;An Agile Approach for Adopting Sustainable Energy Solutions with Advanced Computational Techniques.&rdquo;</b> Energies, vol. 17, no. 13 (2024). &mdash; <a href="https://doi.org/10.3390/en17133150" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>G.A. Ludin, M.A. Amin, A.S. Irshad, S. Ueda, Z. Farhad, M.H. Elkholy, T. Senjyu. <b>&ldquo;Power Transmission in Afghanistan: Challenges, Opportunities and Proposals.&rdquo;</b> AIMS Energy, vol. 12, no. 4, pp. 840-871 (2024). &mdash; <a href="https://doi.org/10.3934/energy.2024040" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, M.H. Elkholy, A. Alblawi, T. Said. <b>&ldquo;Artificial Intelligence Applications for Microgrids Integration and Management of Hybrid Renewable Energy Sources.&rdquo;</b> Artificial Intelligence Review, vol. 56, no. 9, pp. 10557-10611 (2023). &mdash; <a href="https://doi.org/10.1007/s10462-023-10410-w" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>I.T. Halidou, H.O.R. Howlader, M.M. Gamil, M.H. Elkholy, T. Senjyu. <b>&ldquo;Optimal Power Scheduling and Techno-Economic Analysis of a Residential Microgrid for a Remotely Located Area: A Case Study for the Sahara Desert of Niger.&rdquo;</b> Energies, vol. 16, no. 8 (2023). &mdash; <a href="https://doi.org/10.3390/en16083471" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, A. Alblawi, M. Tayseer, M.H. Elkholy. <b>&ldquo;FPGA Control System Technology for Integrating the PV/wave/FC Hybrid System Using ANN Optimized by MFO Techniques.&rdquo;</b> Sustainable Cities and Society, vol. 80, p. 103825 (2022). &mdash; <a href="https://doi.org/10.1016/j.scs.2022.103825" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, A. Elgarhy, M.H. Elkholy, M.A. Farahat. <b>&ldquo;Integration of Fuel Cells into an Off-grid Hybrid System Using Wave and Solar Energy.&rdquo;</b> International Journal of Electrical Power &amp; Energy Systems, vol. 130, p. 106939 (2021). &mdash; <a href="https://doi.org/10.1016/j.ijepes.2021.106939" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A. Alblawi, T. Said, M. Talaat, M.H. Elkholy. <b>&ldquo;PV Solar Power Forecasting Based on Hybrid MFFNN-ALO.&rdquo;</b> Proc. 2022 13th Int. Conf. on Electrical Engineering (ICEENG), pp. 52-56 (2022). &mdash; <a href="https://doi.org/10.1109/ICEENG49683.2022.9782040" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Dong, Y. Li, D. Song, J. Yang, M. Su, X. Deng, et al. <b>&ldquo;Uncertainty and Global Sensitivity Analysis of Levelized Cost of Energy in Wind Power Generation.&rdquo;</b> Energy Conversion and Management, vol. 229, p. 113781 (2021). &mdash; <a href="https://doi.org/10.1016/j.enconman.2020.113781" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, M.H. Elkholy, M.A. Farahat. <b>&ldquo;Operating Reserve Investigation for the Integration of Wave, Solar and Wind Energies.&rdquo;</b> Energy, vol. 197, p. 117207 (2020). &mdash; <a href="https://doi.org/10.1016/j.energy.2020.117207" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>A. Alblawi, M.H. Elkholy, M. Talaat. <b>&ldquo;ANN for Assessment of Energy Consumption of 4 kW PV Modules over a Year Considering the Impacts of Temperature and Irradiance.&rdquo;</b> Sustainability, vol. 11, no. 23 (2019). &mdash; <a href="https://doi.org/10.3390/su11236802" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M. Talaat, M.A. Farahat, M.H. Elkholy. <b>&ldquo;Renewable Power Integration: Experimental and Simulation Study to Investigate the Ability of Integrating Wave, Solar and Wind Energies.&rdquo;</b> Energy, vol. 170, pp. 668-682 (2019). &mdash; <a href="https://doi.org/10.1016/j.energy.2018.12.171" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>M.H. Elkholy, et al. <b>&ldquo;Intelligent Dispatch-Based Optimization of Hybrid Renewable Architectures Incorporating Electric Mobility and Hydrogen Storage for Commercial Energy Systems.&rdquo;</b> IEEE Access (2026). &mdash; <a href="https://doi.org/10.1109/ACCESS.2026.3661790" target="_blank" rel="noopener">DOI</a></span></li>
+<li class="pub-full-item reveal"><span>R. Chen, L. Liao, D. Song, C. Wei, J. Yang, M. Talaat, M.H. Elkholy. <b>&ldquo;Two-stage Optimization Scheduling Strategy for Virtual Power Plants Considering the Correlated Uncertainty of Distributed Energy Storage in Extreme Scenarios.&rdquo;</b> Applied Energy, vol. 409, p. 127477 (2026).</span></li></ol>
+      <h3 class="pub-full-heading">Under Review / Accepted</h3>
+      <ul class="review-list"><li class="review-item reveal"><span>D. Song, G. Shen, L. Wang, J. Yang, M. Dong, M.H. Elkholy, et al. <b>&ldquo;Yaw Optimization for Floating Offshore Wind Farm Based on Monte Carlo Tree Search Algorithm.&rdquo;</b> IEEE Transactions on Automation Science and Engineering. <span class="review-tag">Minor Review</span></span></li>
+<li class="review-item reveal"><span>E.S. Ali, M.H. Elkholy, et al. <b>&ldquo;Comparative Analysis and Optimization of Hybrid Renewable Energy Architectures Featuring Electric Mobility and Hydrogen Storage for Commercial Infrastructure Using Intelligent Energy Dispatch Algorithm.&rdquo;</b> International Journal of Electrical Power and Energy Systems. <span class="review-tag">Minor Review</span></span></li>
+<li class="review-item reveal"><span>J. Noor, D. Song, A. Yousaf, M. Dong, J. Yang, et al. <b>&ldquo;Bipolar DC Microgrid Optimization Using Novel SEPIC-Cuk Fused Converter with Fuzzy Logic Based Droop Control.&rdquo;</b> Energy. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>N. Jargalsaikhan, M. Talaat, M.H. Elkholy, T. Senjyu. <b>&ldquo;Effect of Ambient Temperature Variance on Power Output of Wind Turbine and Mitigation Strategy.&rdquo;</b> Energy. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>Q. Tayyab, A.R. Sorgul, G.A. Ludin, S. Ahmed, M.H. Elkholy, et al. <b>&ldquo;Empowering Smart Grids: Maximizing Fuel Savings and Grid Stability through Optimal Energy Storage and Unit Commitment.&rdquo;</b> Energy Conversion and Management: X. <span class="review-tag">Accepted</span></span></li>
+<li class="review-item reveal"><span>M.H. Elkholy. <b>&ldquo;Artificial Intelligence-Based Joint Planning and Operational Optimization of Electric Vehicle Charging Stations and Distributed Generators for Enhanced Reliability and Resilience in Power Distribution Systems.&rdquo;</b> IEEE Transactions on Automation Science and Engineering. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>M.H. Elkholy, A. Elgarhy. <b>&ldquo;High-Fidelity Simulation and Transient Stability Assessment of Power Quality and Damping Behavior in Multi-Source Electric Vehicle Charging Stations with Combined Load Configurations.&rdquo;</b> eTransportation. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>M.H. Elkholy. <b>&ldquo;Optimal Design and Energy Management of a Renewable-Powered Microgrid for EV Charging Stations with Park-and-Ride Integration: A Case Study in Liaoning Province, China.&rdquo;</b> Protection and Control of Modern Power Systems. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>M.H. Elkholy. <b>&ldquo;Synergistic E-Mobility-Aware Power Scheduling for Park-and-Ride Electric Vehicle Charging Infrastructure Incorporating Bidirectional Vehicle-to-Station Transfer on Okinawa Island Using a Hippopotamus Optimization Algorithm.&rdquo;</b> Applied Energy. <span class="review-tag">Under Review</span></span></li>
+<li class="review-item reveal"><span>M.H. Elkholy. <b>&ldquo;Integrated Spatial and Capacity Optimization of Renewable-Powered Park-and-Ride Electric Vehicle Charging Hubs for Urban Mobility Enhancement, Congestion Mitigation and Power System Stability.&rdquo;</b> eTransportation. <span class="review-tag">Under Review</span></span></li></ul>
+    </div></div>
+  </div>
+</section>
+
+<section id="achievements" class="section section--navy">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow eyebrow--light">Recognition</p>
+      <h2 class="section-title section-title--light">Achievements &amp; Grants</h2>
+      <p class="section-intro section-intro--light">Awards, funded research programs, and editorial service across a decade of academic work.</p>
+    </div>
+    <div class="achieve-list"><div class="achieve-item reveal"><div class="achieve-icon"><i class="fa-solid fa-award"></i></div><div><div class="achieve-title">President&rsquo;s Honorary Award</div><div class="achieve-body">University of the Ryukyus &mdash; the university&rsquo;s highest recognition for a graduate student, distinguished by publishing 11 high-impact journal papers in Elsevier and IEEE venues during his Ph.D.</div></div></div>
+<div class="achieve-item reveal"><div class="achieve-icon"><i class="fa-solid fa-torii-gate"></i></div><div><div class="achieve-title">Monbukagakusho Scholarship</div><div class="achieve-body">Government of Japan (Oct 2022) &mdash; Special Doctoral Program, Resilient Smart City Program, under the International Priority Graduate Program (PGP), MEXT.</div></div></div>
+<div class="achieve-item reveal"><div class="achieve-icon"><i class="fa-solid fa-medal"></i></div><div><div class="achieve-title">Zagazig University Award for International Publications</div><div class="achieve-body">Awarded in 2021, 2022, and 2023 for significant contributions to globally recognized research.</div></div></div></div>
+    <div class="grants-grid"><div class="grant-card reveal"><div class="grant-role">Co-Principal Investigator</div><h3 class="grant-title">EV and Renewable Energy Integration for Grid Stability</h3><div class="grant-funder"><i class="fa-solid fa-sack-dollar"></i>&nbsp; Research Development and Innovation Authority (RDIA), Saudi Arabia &middot; SAR 4.53M</div><div class="grant-partners">Jazan University (Saudi Arabia) &middot; University of the Ryukyus (Japan) &middot; Zagazig University (Egypt)</div></div>
+<div class="grant-card reveal"><div class="grant-role">Co-Principal Investigator</div><h3 class="grant-title">Green Hydrogen and Smart Cities for Net-Zero 2060</h3><div class="grant-funder"><i class="fa-solid fa-sack-dollar"></i>&nbsp; Saudi Basic Science Research Consortium Grant (BSRCG)</div><div class="grant-partners">Jazan University &amp; Yanbu Industrial College (Saudi Arabia) &middot; Zagazig University (Egypt) &middot; University of the Ryukyus (Japan) &middot; Central South University (China)</div></div></div>
+    <div class="service-strip reveal">
+      <p class="service-strip-title">Editorial &amp; Reviewer Service</p>
+      <div class="service-tags"><span class="service-tag">Reviewer &middot; IEEE Access</span>
+<span class="service-tag">Reviewer &middot; Energy Conversion and Management</span>
+<span class="service-tag">Reviewer &middot; Computers &amp; Electrical Engineering</span>
+<span class="service-tag">Reviewer &middot; International Journal of Green Energy</span>
+<span class="service-tag">Reviewer &middot; Energy</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Toolkit</p>
+      <h2 class="section-title">Skills &amp; Languages</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="reveal">
+        <h3 class="skills-col-title"><i class="fa-solid fa-toolbox"></i> Technical Skills</h3>
+        <ul class="skills-list">
+          <li>MATLAB</li><li>AutoCAD</li><li>ETAP</li><li>COMSOL Multiphysics</li><li>Microsoft Office (Word, Excel, PowerPoint)</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <h3 class="skills-col-title"><i class="fa-solid fa-language"></i> Languages</h3>
+        <ul class="skills-list">
+          <li>Arabic &mdash; Native, fluent in writing and speaking</li>
+          <li>English &mdash; Very good in writing and speaking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section section--navy">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow eyebrow--light">Contact</p>
+      <h2 class="section-title section-title--light">Get in Touch</h2>
+      <p class="section-intro section-intro--light">Open to research collaboration, academic inquiries, and speaking opportunities.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a class="contact-row" href="mailto:Mahmoud.elkholy@kfupm.edu.sa"><i class="fa-solid fa-envelope"></i> Mahmoud.elkholy@kfupm.edu.sa</a>
+        <a class="contact-row" href="mailto:mhmkholy@zu.edu.eg"><i class="fa-solid fa-envelope"></i> mhmkholy@zu.edu.eg</a>
+        <a class="contact-row" href="tel:+966537723201"><i class="fa-solid fa-phone"></i> +966 53 772 3201</a>
+        <div class="contact-row"><i class="fa-solid fa-location-dot"></i> Al Khobar, Eastern Province, Saudi Arabia</div>
+      </div>
+      <div class="profile-links reveal"><a class="profile-btn" href="https://scholar.google.com/citations?user=Y2ATJeoAAAAJ&hl=ar" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+<a class="profile-btn" href="https://orcid.org/0000-0003-3615-3714" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a>
+<a class="profile-btn" href="https://www.researchgate.net/profile/M-Elkholy" target="_blank" rel="noopener"><i class="fa-solid fa-flask"></i> ResearchGate</a>
+<a class="profile-btn" href="https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=M.H.%20Elkholy" target="_blank" rel="noopener"><i class="fa-brands fa-ieee"></i> IEEE Xplore</a>
+<a class="profile-btn profile-btn--tbd" href="#contact"><i class="fa-brands fa-linkedin"></i> LinkedIn <span class="profile-tbd">(add link)</span></a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Mahmoud Elkholy. All rights reserved.</p>
+    <p><a href="mailto:Mahmoud.elkholy@kfupm.edu.sa">Mahmoud.elkholy@kfupm.edu.sa</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  var toggle = document.getElementById('menuToggle');
+  var navLinks = document.getElementById('navLinks');
+  var backdrop = document.getElementById('navBackdrop');
+  function closeMenu(){
+    navLinks.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    toggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  }
+  function openMenu(){
+    navLinks.classList.add('is-open');
+    backdrop.classList.add('is-open');
+    toggle.setAttribute('aria-expanded','true');
+    toggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+  }
+  toggle.addEventListener('click', function(){
+    navLinks.classList.contains('is-open') ? closeMenu() : openMenu();
+  });
+  backdrop.addEventListener('click', closeMenu);
+  navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+  var sections = document.querySelectorAll('section[id]');
+  var navA = document.querySelectorAll('.nav-links a');
+  var navObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        navA.forEach(function(a){ a.classList.remove('active'); });
+        var link = document.querySelector('.nav-links a[href="#' + entry.target.id + '"]');
+        if(link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  sections.forEach(function(s){ navObserver.observe(s); });
+
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(function(el){ revealObserver.observe(el); });
+
+  var pubBtn = document.getElementById('pubToggleBtn');
+  var pubFull = document.getElementById('pubFull');
+  pubBtn.addEventListener('click', function(){
+    var isOpen = pubFull.classList.toggle('is-open');
+    pubBtn.classList.toggle('is-open', isOpen);
+    pubBtn.querySelector('span').textContent = isOpen ? 'Hide Full List' : 'View All Publications';
+    if(isOpen){ pubFull.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); }); }
+  });
+})();
+</script>
+</body>
+</html>
