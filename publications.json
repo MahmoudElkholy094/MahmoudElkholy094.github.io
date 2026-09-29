@@ -1,1 +1,214 @@
-[]
+[
+  {
+    "title": "Techno-economic assessment of hybrid hydrogen utilization and co-product valorization in multi-microgrid island systems: A case study of Okinawa",
+    "year": "2026"
+  },
+  {
+    "title": "Long-term thermal power reduction in Okinawa’s island grid: Risk-aware multi-objective optimization of second-life batteries with degradation and circularity assessment",
+    "year": "2026"
+  },
+  {
+    "title": "Resilience-oriented optimization of a green hydrogen backup system with an integrated electric vehicle charging network using the hippopotamus optimization algorithm in semi-urban areas of Pakistan",
+    "year": "2026"
+  },
+  {
+    "title": "Advanced optimization for sustainable energy management: A case study of microgrid design in Niamey, Niger using the transient search algorithm",
+    "year": "2026"
+  },
+  {
+    "title": "Long-term thermal power reduction in Okinawa’s island grid: Risk-aware multi-objective optimization of second-life batteries with degradation and circularity assessment",
+    "year": "2026"
+  },
+  {
+    "title": "Two-stage optimization scheduling strategy for virtual power plants considering the correlated uncertainty of distributed energy storage in extreme scenarios",
+    "year": "2026"
+  },
+  {
+    "title": "A bi-level optimization approach for siting and sizing of distributed wind-storage power systems in rural areas based on MCTS and IPSO algorithms",
+    "year": "2025"
+  },
+  {
+    "title": "Feedback correction scheduling strategy for electric vehicles based on multi-regional agent master-slave and evolutionary hybrid game",
+    "year": "2025"
+  },
+  {
+    "title": "Deep Learning-Based Recognition and Classification of Soiled Photovoltaic Modules Using HALCON Software for Solar Cleaning Robots",
+    "year": "2025"
+  },
+  {
+    "title": "Optimal microgrid planning for electricity security in Niamey: A strategic response to sudden supply disruptions from neighboring sources",
+    "year": "2025"
+  },
+  {
+    "title": "A flexible multi-agent system for managing demand and variability in hybrid energy systems for rural communities",
+    "year": "2025"
+  },
+  {
+    "title": "ANN-based Model Predictive Control for Hybrid Energy Storage Systems in DC Microgrid",
+    "year": "2025"
+  },
+  {
+    "title": "Author Correction: A flexible multi-agent system for managing demand and variability in hybrid energy systems for rural communities (Scientific Reports, (2025), 15, 1, (16255), 10.1038/s41598-025-01288-5)",
+    "year": "2025"
+  },
+  {
+    "title": "Cyber-resilient machine learning framework for accurate individual load forecasting and anomaly detection in smart grids",
+    "year": "2025"
+  },
+  {
+    "title": "Dynamic hybrid energy management for self-sufficient residential microgrids: A flexibility-constrained approach with integration of hybrid backup storage systems",
+    "year": "2025"
+  },
+  {
+    "title": "Enhancing stability and power quality in electric vehicle charging stations powered by hybrid energy sources through harmonic mitigation and load management",
+    "year": "2025"
+  },
+  {
+    "title": "Long-term thermal power reduction in Okinawa’s island grid: Risk-aware multi-objective optimization of second-life batteries with degradation and circularity assessment",
+    "year": "2025"
+  },
+  {
+    "title": "Power capacity enhancement of hydropower plant through the penetration of solar and wind energy",
+    "year": "2025"
+  },
+  {
+    "title": "Sustainable and reliable energy management for urban hybrid energy systems: A case study in Islamabad Pakistan on hydrogen and battery integration using transient search optimization algorithm",
+    "year": "2025"
+  },
+  {
+    "title": "Implementation of a multistage predictive energy management strategy considering electric vehicles using a novel hybrid optimization technique",
+    "year": "2024"
+  },
+  {
+    "title": "Integrated Home Energy Management with Hybrid Backup Storage and Vehicle-to-Home Systems for Enhanced Resilience, Efficiency, and Energy Independence in Green Buildings",
+    "year": "2024"
+  },
+  {
+    "title": "Comparative analyses and optimizations of hybrid biomass and solar energy systems based upon a variety of biomass technologies",
+    "year": "2024"
+  },
+  {
+    "title": "Techno-economic evaluation and comparison of the optimal PV/Wind and grid hybrid system with horizontal and vertical axis wind turbines",
+    "year": "2024"
+  },
+  {
+    "title": "An Agile Approach for Adopting Sustainable Energy Solutions with Advanced Computational Techniques",
+    "year": "2024"
+  },
+  {
+    "title": "Identification of power grids low-frequency oscillations through a combined MEEMD-Prony method",
+    "year": "2024"
+  },
+  {
+    "title": "Novel integration and optimization of reliable photovoltaic and biomass integrated system for rural electrification",
+    "year": "2024"
+  },
+  {
+    "title": "Monolithic design of self-adaptive CMOS converter and robust event-triggered consensus control for integration of multi-renewable energy sources with battery storage system",
+    "year": "2024"
+  },
+  {
+    "title": "An Agile Approach for Adopting Sustainable and Environmentally Friendly Energy Solutions with Advanced Computational Techniques",
+    "year": "2024"
+  },
+  {
+    "title": "Integration and performance analysis of optimal large-scale hybrid PV and pump hydro storage system based upon floating PV for practical application",
+    "year": "2024"
+  },
+  {
+    "title": "Optimal resilient operation and sustainable power management within an autonomous residential microgrid using African vultures optimization algorithm",
+    "year": "2024"
+  },
+  {
+    "title": "Techno-economic configuration of an optimized resident microgrid: A case study for Afghanistan",
+    "year": "2024"
+  },
+  {
+    "title": "Distributed energy management of electric vehicle charging stations based on hierarchical pricing mechanism and aggregate feasible regions",
+    "year": "2024"
+  },
+  {
+    "title": "Maximizing microgrid resilience: A two-stage AI-Enhanced system with an integrated backup system using a novel hybrid optimization algorithm",
+    "year": "2024"
+  },
+  {
+    "title": "A resilient and intelligent multi-objective energy management for a hydrogen-battery hybrid energy storage system based on MFO technique",
+    "year": "2024"
+  },
+  {
+    "title": "Techno-economic configuration of a hybrid backup system within a microgrid considering vehicle-to-grid technology: A case study of a remote area",
+    "year": "2024"
+  },
+  {
+    "title": "Experimental Investigation of AI-Enhanced FPGA-Based Optimal Management and Control of an Isolated Microgrid",
+    "year": "2024"
+  },
+  {
+    "title": "Novel Approach for Energy Balancing With Intermittent Renewable Energy Source Using Multi-Objective Genetic Algorithm",
+    "year": "2024"
+  },
+  {
+    "title": "Power transmission in Afghanistan: Challenges, opportunities and proposals",
+    "year": "2024"
+  },
+  {
+    "title": "Artificial intelligence applications for microgrids integration and management of hybrid renewable energy sources",
+    "year": "2023"
+  },
+  {
+    "title": "Experimental validation of an AI-embedded FPGA-based Real-Time smart energy management system using Multi-Objective Reptile search algorithm and gorilla troops optimizer",
+    "year": "2023"
+  },
+  {
+    "title": "Optimal Power Scheduling and Techno-Economic Analysis of a Residential Microgrid for a Remotely Located Area: A Case Study for the Sahara Desert of Niger",
+    "year": "2023"
+  },
+  {
+    "title": "Rotor equivalent wind speed prediction based on mechanism analysis and residual correction using Lidar measurements",
+    "year": "2023"
+  },
+  {
+    "title": "Dynamic centralized control and intelligent load management system of a remote residential building with V2H technology",
+    "year": "2022"
+  },
+  {
+    "title": "Smart centralized energy management system for autonomous microgrid using FPGA",
+    "year": "2022"
+  },
+  {
+    "title": "PV solar power forecasting based on hybrid MFFNN-ALO",
+    "year": "2022"
+  },
+  {
+    "title": "FPGA control system technology for integrating the PV/wave/FC hybrid system using ANN optimized by MFO techniques",
+    "year": "2022"
+  },
+  {
+    "title": "Design and Implementation of a Real-Time Smart Home Management System Considering Energy Saving",
+    "year": "2022"
+  },
+  {
+    "title": "Design and implementation of a Real-time energy management system for an isolated Microgrid: Experimental validation",
+    "year": "2022"
+  },
+  {
+    "title": "Integration of fuel cells into an off-grid hybrid system using wave and solar energy",
+    "year": "2021"
+  },
+  {
+    "title": "Uncertainty and global sensitivity analysis of levelized cost of energy in wind power generation",
+    "year": "2021"
+  },
+  {
+    "title": "Operating reserve investigation for the integration of wave, solar and wind energies",
+    "year": "2020"
+  },
+  {
+    "title": "ANN for assessment of energy consumption of 4 kW PV modules over a year considering the impacts of temperature and irradiance",
+    "year": "2019"
+  },
+  {
+    "title": "Renewable power integration: Experimental and simulation study to investigate the ability of integrating wave, solar and wind energies",
+    "year": "2019"
+  }
+]
