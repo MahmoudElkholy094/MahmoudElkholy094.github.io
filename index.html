@@ -385,13 +385,50 @@ section[id]{scroll-margin-top:84px}
       </div>
       <a class="scholar-link" href="https://scholar.google.com/citations?user=Y2ATJeoAAAAJ&amp;hl=ar" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i> View on Google Scholar</a>
     </div>
-    <ul class="pub-list" style="margin-top:44px"><li class="pub-item reveal"><span class="pub-index">[1]</span><div class="pub-content"><h3 class="pub-title">Intelligent Dispatch-Based Optimization of Hybrid Renewable Architectures Incorporating Electric Mobility and Hydrogen Storage for Commercial Energy Systems</h3><p class="pub-authors">M.H. Elkholy, et al.</p><div class="pub-footer"><span class="pub-venue">IEEE Access &middot; 2026</span><a class="pub-link" href="https://doi.org/10.1109/ACCESS.2026.3661790" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[2]</span><div class="pub-content"><h3 class="pub-title">Design and Implementation of a Real-time Energy Management System for an Isolated Microgrid: Experimental Validation</h3><p class="pub-authors">M.H. Elkholy, M. Elymany, H. Metwally, M.A. Farahat, T. Senjyu, M.E. Lotfy</p><div class="pub-footer"><span class="pub-venue">Applied Energy, vol. 327, p. 120105 &middot; 2022</span><a class="pub-link" href="https://doi.org/10.1016/j.apenergy.2022.120105" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[3]</span><div class="pub-content"><h3 class="pub-title">Implementation of a Multistage Predictive Energy Management Strategy Considering Electric Vehicles Using a Novel Hybrid Optimization Technique</h3><p class="pub-authors">M.H. Elkholy, T. Senjyu, M.M. Gamil, M.E. Lotfy, D. Song, et al.</p><div class="pub-footer"><span class="pub-venue">Journal of Cleaner Production, vol. 476, p. 143765 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.jclepro.2024.143765" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[4]</span><div class="pub-content"><h3 class="pub-title">Optimal Resilient Operation and Sustainable Power Management within an Autonomous Residential Microgrid Using African Vultures Optimization Algorithm</h3><p class="pub-authors">M.H. Elkholy, T. Senjyu, M. Elymany, M.M. Gamil, M. Talaat, et al.</p><div class="pub-footer"><span class="pub-venue">Renewable Energy, vol. 224, p. 120247 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.renene.2024.120247" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[5]</span><div class="pub-content"><h3 class="pub-title">Techno-economic Configuration of a Hybrid Backup System within a Microgrid Considering Vehicle-to-Grid Technology: A Case Study of a Remote Area</h3><p class="pub-authors">M.H. Elkholy, T. Said, M. Elymany, T. Senjyu, M.M. Gamil, et al.</p><div class="pub-footer"><span class="pub-venue">Energy Conversion and Management, vol. 301, p. 118032 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1016/j.enconman.2023.118032" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[6]</span><div class="pub-content"><h3 class="pub-title">A Flexible Multi-agent System for Managing Demand and Variability in Hybrid Energy Systems for Rural Communities</h3><p class="pub-authors">E.S. Ali, M.H. Elkholy, T. Senjyu, et al.</p><div class="pub-footer"><span class="pub-venue">Scientific Reports 15, 16255 &middot; 2025</span><a class="pub-link" href="https://doi.org/10.1038/s41598-025-01288-5" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li>
-<li class="pub-item reveal"><span class="pub-index">[7]</span><div class="pub-content"><h3 class="pub-title">Experimental Investigation of AI-Enhanced FPGA-Based Optimal Management and Control of an Isolated Microgrid</h3><p class="pub-authors">M.H. Elkholy, A. Yona, S. Ueda, T. Said, T. Senjyu, M.E. Lotfy</p><div class="pub-footer"><span class="pub-venue">IEEE Transactions on Transportation Electrification, vol. 10, no. 2, pp. 3670-3679 &middot; 2024</span><a class="pub-link" href="https://doi.org/10.1109/TTE.2023.3315729" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></li></ul>
+    <ul class="pub-list" id="dynamic-publications" style="margin-top:44px">
+  <li class="pub-item reveal">
+    <span class="pub-index">Loading...</span>
+    <div class="pub-content">
+      <h3 class="pub-title">Loading publications from ORCID...</h3>
+      <p class="pub-authors">Please wait</p>
+    </div>
+  </li>
+</ul>
+
+<script>
+async function loadPublications(){
+  const container = document.getElementById("dynamic-publications");
+  try{
+    const response = await fetch("publications.json?"+Date.now());
+    const pubs = await response.json();
+
+    container.innerHTML = "";
+
+    pubs.forEach((pub,index)=>{
+      const li=document.createElement("li");
+      li.className="pub-item reveal";
+
+      li.innerHTML=`
+        <span class="pub-index">[${index+1}]</span>
+        <div class="pub-content">
+          <h3 class="pub-title">${pub.title || "Untitled publication"}</h3>
+          <p class="pub-authors">${pub.authors || "M.H. Elkholy"}</p>
+          <div class="pub-footer">
+            <span class="pub-venue">${pub.journal || ""} ${pub.year ? "· "+pub.year : ""}</span>
+            ${pub.doi ? `<a class="pub-link" href="${pub.doi}" target="_blank">
+            View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a>`:""}
+          </div>
+        </div>`;
+      container.appendChild(li);
+    });
+  }
+  catch(error){
+    container.innerHTML="<li class='pub-item'>Unable to load publications.</li>";
+    console.error(error);
+  }
+}
+loadPublications();
+</script>
     <div class="pub-toggle-wrap">
       <button class="pub-toggle-btn" id="pubToggleBtn"><span>View All Publications</span> <i class="fa-solid fa-chevron-down"></i></button>
     </div>
