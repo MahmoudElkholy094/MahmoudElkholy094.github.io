@@ -435,6 +435,9 @@ loadPublications();
     <div class="pub-full" id="pubFull"><div class="pub-full-inner">
       <h3 class="pub-full-heading">Published &amp; In Press (43)</h3>
       <ol class="pub-full-list"><li class="pub-full-item reveal"><span>D. Song, A. Yousaf, J. Noor, et al. <b>&ldquo;ANN-Based Model Predictive Control for Hybrid Energy Storage Systems in DC Microgrid.&rdquo;</b> Protection and Control of Modern Power Systems, vol. 10, no. 4, pp. 1-15 (2025).</span></li>
+<div id="dynamic-publications">
+    Loading updated publications...
+</div>
 <li class="pub-full-item reveal"><span>A.S. Irshad, A.S. Amin, A.M. Ilham, M.H. Elkholy, et al. <b>&ldquo;Power Capacity Enhancement of Hydropower Plant through the Penetration of Solar and Wind Energy.&rdquo;</b> International Journal of Electrical Power &amp; Energy Systems, vol. 169, p. 110787 (2025). &mdash; <a href="https://doi.org/10.1016/j.ijepes.2025.110787" target="_blank" rel="noopener">DOI</a></span></li>
 <li class="pub-full-item reveal"><span>S. Ahmed, M.H. Elkholy, M. Talaat, T. Senjyu, et al. <b>&ldquo;Dynamic Hybrid Energy Management for Self-sufficient Residential Microgrids: A Flexibility-constrained Approach with Integration of Hybrid Backup Storage Systems.&rdquo;</b> Journal of Energy Storage, vol. 138, p. 118745 (2025).</span></li>
 <li class="pub-full-item reveal"><span>M.H. Elkholy, A. Yona, S. Ueda, T. Said, T. Senjyu, M.E. Lotfy. <b>&ldquo;Experimental Investigation of AI-Enhanced FPGA-Based Optimal Management and Control of an Isolated Microgrid.&rdquo;</b> IEEE Transactions on Transportation Electrification, vol. 10, no. 2, pp. 3670-3679 (2024). &mdash; <a href="https://doi.org/10.1109/TTE.2023.3315729" target="_blank" rel="noopener">DOI</a></span></li>
@@ -651,6 +654,39 @@ loadPublications();
   console.log('Auto update system active',data);
  } catch(e){console.log('Auto update waiting for data sources',e);}
 })();
+</script>
+  <script>
+fetch("publications.json?v=" + Date.now())
+.then(response => response.json())
+.then(publications => {
+
+    const box = document.getElementById("pubFull");
+
+    if (!box) return;
+
+    const list = document.createElement("ol");
+    list.className = "pub-full-list";
+
+    publications.forEach((pub, index) => {
+
+        const item = document.createElement("li");
+        item.className = "pub-full-item reveal";
+
+        item.innerHTML = `
+            <span>${index + 1}</span>
+            <b>${pub.title}</b>
+            <br>
+            <small>${pub.year || ""}</small>
+        `;
+
+        list.appendChild(item);
+
+    });
+
+    box.appendChild(list);
+
+})
+.catch(error => console.log("Publication loading error:", error));
 </script>
 </body>
 </html>
