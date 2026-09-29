@@ -1,0 +1,15 @@
+name: Auto Update Website
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check update timestamp
+        run: |
+          echo "Website auto update framework active"
