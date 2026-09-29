@@ -636,7 +636,12 @@ loadPublications();
 // Automatic data updater - GitHub Pages compatible
 (async function(){
  try {
-  const files=['profile.json','news.json','projects.json'];
+  const files=[
+    'profile.json',
+    'news.json',
+    'projects.json',
+    'publications.json'
+];
   const data={};
   for(const f of files){
    const r=await fetch('data/'+f+'?v='+Date.now());
